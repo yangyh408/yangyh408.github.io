@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Test]]></title>
+    <url>%2F2019%2F04%2F08%2FTest%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152#include &lt;iostream&gt;#include &lt;string&gt;using namespace std;const string rem[] = &#123;"**********新一局**********", " 1.出剪子", " 2.出石头", " 3.出布", "**************************"&#125;;int main()&#123; //x、y分别记录甲乙的猜拳代码 int x, y; cout &lt;&lt; "2018110639_杨宇豪" &lt;&lt; endl; //输出提示界面 for (int i = 0; i &lt; 5; ++i) cout &lt;&lt; rem[i] &lt;&lt; endl; cout &lt;&lt; "请输入甲的猜拳代码："; cin &gt;&gt; x; cout &lt;&lt; "请输入乙的猜拳代码："; cin &gt;&gt; y; //先判断甲乙平局的情况 if (x == y) cout &lt;&lt; "甲乙平局！" &lt;&lt; endl; //通过规则判断甲乙的胜负 else switch (x) &#123; case 1: if (y == 2) cout &lt;&lt; "乙获胜！" &lt;&lt; endl; if (y == 3) cout &lt;&lt; "甲获胜！" &lt;&lt; endl; break; case 2: if (y == 1) cout &lt;&lt; "甲获胜！" &lt;&lt; endl; if (y == 3) cout &lt;&lt; "乙获胜！" &lt;&lt; endl; break; case 3: if (y == 2) cout &lt;&lt; "甲获胜！" &lt;&lt; endl; if (y == 1) cout &lt;&lt; "乙获胜！" &lt;&lt; endl; break; default: cerr &lt;&lt; "您输入的猜拳代码有误，请重新输入！" &lt;&lt; endl; &#125; return 0;&#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F04%2F07%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
