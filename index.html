@@ -566,7 +566,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-09T17:08:24+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-09T17:10:57+08:00">
                 2019-04-09
               </time>
             
@@ -634,38 +634,15 @@
 
       
         
-          
-            <div class="note info"><h2 id="创建Droplets"><a href="#创建Droplets" class="headerlink" title="创建Droplets"></a>创建Droplets</h2></div>
+          <div class="note info"><h2 id="创建Droplets"><a href="#创建Droplets" class="headerlink" title="创建Droplets"></a>创建Droplets</h2></div>
 <p><img src="/images/post_images/DigitalOcean的使用-01.png" alt="创建"></p>
-<div class="note info"><h2 id="配置选择"><a href="#配置选择" class="headerlink" title="配置选择"></a>配置选择</h2></div>
-<p>image 选择Ubuntu系统<br>Size 选第一个5$/mon<br><img src="/images/post_images/DigitalOcean的使用-02.png" alt="配置"></p>
-<div class="note info"><h2 id="节点选择"><a href="#节点选择" class="headerlink" title="节点选择"></a>节点选择</h2><p>联通用户推荐选择<strong>SanFrancisco-01</strong></p></div>
-<ol>
-<li>通过ping来检测丢包率和延迟，200ms一下就很优秀</li>
-<li>通过<a href="https://speedtest.net/" target="_blank" rel="noopener">speedtest</a>来测单线程连接速率，能否把带宽跑满</li>
-</ol>
-<p><img src="/images/post_images/DigitalOcean的使用-03.png" alt="节点"></p>
-<div class="note info"><h2 id="查看服务器信息"><a href="#查看服务器信息" class="headerlink" title="查看服务器信息"></a>查看服务器信息</h2></div>
-<p>进入您的邮箱，此时您会收到一封包含服务器详细登陆信息的邮件</p>
-<p><img src="/images/post_images/DigitalOcean的使用-04.png" alt="该服务器已注销"></p>
-<div class="note info"><h2 id="登陆服务器"><a href="#登陆服务器" class="headerlink" title="登陆服务器"></a>登陆服务器</h2></div>
-<p>在终端中输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh Username @ IP Address</span><br></pre></td></tr></table></figure>
-<p><img src="/images/post_images/DigitalOcean的使用-05.png" alt="登陆"></p>
-<div class="note info"><h2 id="安装最新内核"><a href="#安装最新内核" class="headerlink" title="安装最新内核"></a>安装最新内核</h2></div>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
-<p><img src="/images/post_images/DigitalOcean的使用-06.png" alt></p>
-<div class="note warning"><h2 id="安装脚本"><a href="#安装脚本" class="headerlink" title="安装脚本"></a>安装脚本</h2><p>加密类型选择:<br><strong>14）chacha20-ietf-poly1305</strong></p></div>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-libev-debian.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev-debian.sh</span><br><span class="line">chmod +x shadowsocks-libev-debian.sh</span><br><span class="line">./shadowsocks-libev-debian.sh 2&gt;&amp;1 | tee shadowsocks-libev-debian.log</span><br></pre></td></tr></table></figure>
-<p>稍等片刻，完成！</p>
-<p>详细信息可以查看<a href="https://teddysun.com/358.html" target="_blank" rel="noopener">秋水逸冰</a>的博文!</p>
-<div class="note info"><h2 id="导入Shadowsocks"><a href="#导入Shadowsocks" class="headerlink" title="导入Shadowsocks"></a>导入Shadowsocks</h2></div>
-<p>在服务器设置中输入服务器的地址、节点、加密方法、密码即可<br><img src="/images/post_images/DigitalOcean的使用-07.png" alt="Shadowsocks"></p>
-<p>⚠️<strong><em>注意</em></strong>:<br>将指定网站加入PAC规则中：<code>|| www.example.com ^</code></p>
-<div class="note success"><h3 id="福利鸭"><a href="#福利鸭" class="headerlink" title="福利鸭"></a>福利鸭</h3></div>
-<p>完成在读大学生认证可以在<a href="https://education.github.com/" target="_blank" rel="noopener">GitHub学生礼包</a>中免费领取$50的DigitalOcean抵用券嗷！</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/09/DigitalOcean的使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
