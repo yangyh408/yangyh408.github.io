@@ -1,7 +1,7 @@
 ---
 title: venv的安装和使用
 date: 2019-04-08 20:30:57
-tags: memo
+tags: Notes
 ---
 # 安装venv
 

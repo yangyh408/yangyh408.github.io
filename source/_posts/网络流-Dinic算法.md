@@ -1,7 +1,7 @@
 ---
 title: 网络流--Dinic算法
 date: 2019-04-08 21:20:19
-tags: Math,NOI
+tags: [NOI, Math]
 ---
 
 #Dinic算法

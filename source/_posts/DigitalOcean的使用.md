@@ -1,7 +1,7 @@
 ---
 title: DigitalOcean的使用
 date: 2019-04-09 12:42:06
-tags: memo
+tags: Notes
 ---
 
 {% note info %}

@@ -1,7 +1,7 @@
 ---
 title: 快速傅立叶变换(FFT)
 date: 2019-04-08 21:27:50
-tags: Math,NOI
+tags: [Math, NOI]
 ---
 
 # 例题[UOJ#34. 多项式乘法][1]

@@ -1,7 +1,7 @@
 ---
 title: Colaboratory的使用
 date: 2019-04-08 20:44:10
-tags: memo
+tags: Notes
 ---
 
 # Google备份与同步
