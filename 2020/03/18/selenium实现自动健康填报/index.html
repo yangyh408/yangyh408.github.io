@@ -130,19 +130,19 @@
 
 
 
-<meta name="description" content="selenium模拟浏览器操作 在这部分开头我先贴出了自动执行填写健康信息的脚本，对于selenium较为详细的解析和使用指南放在了这一部分的后半段 selenium实战为什么突然想到学习一波selenium的用法呢？一方面是在爬虫学习中听说过有这么一款功能极强的浏览器操作模块，另一方面正赶上疫情爆发大家每天都要填报个人健康情况，对于大多数同学基本都能保持健康，每日填写信息也都大同小异，那为什么">
+<meta name="description" content="selenium模拟浏览器操作 在这部分开头我先贴出了自动执行填写健康信息的脚本，对于selenium较为详细的解析和使用指南放在了这一部分的后半段">
 <meta name="keywords" content="Notes,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="selenium实现自动健康填报">
 <meta property="og:url" content="http://yangyh408.me/2020/03/18/selenium实现自动健康填报/index.html">
 <meta property="og:site_name" content="YangYH408">
-<meta property="og:description" content="selenium模拟浏览器操作 在这部分开头我先贴出了自动执行填写健康信息的脚本，对于selenium较为详细的解析和使用指南放在了这一部分的后半段 selenium实战为什么突然想到学习一波selenium的用法呢？一方面是在爬虫学习中听说过有这么一款功能极强的浏览器操作模块，另一方面正赶上疫情爆发大家每天都要填报个人健康情况，对于大多数同学基本都能保持健康，每日填写信息也都大同小异，那为什么">
+<meta property="og:description" content="selenium模拟浏览器操作 在这部分开头我先贴出了自动执行填写健康信息的脚本，对于selenium较为详细的解析和使用指南放在了这一部分的后半段">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yangyh408.me/images/post_images/健康填报.png">
-<meta property="og:updated_time" content="2020-03-19T03:38:45.674Z">
+<meta property="og:updated_time" content="2020-03-19T03:43:12.688Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selenium实现自动健康填报">
-<meta name="twitter:description" content="selenium模拟浏览器操作 在这部分开头我先贴出了自动执行填写健康信息的脚本，对于selenium较为详细的解析和使用指南放在了这一部分的后半段 selenium实战为什么突然想到学习一波selenium的用法呢？一方面是在爬虫学习中听说过有这么一款功能极强的浏览器操作模块，另一方面正赶上疫情爆发大家每天都要填报个人健康情况，对于大多数同学基本都能保持健康，每日填写信息也都大同小异，那为什么">
+<meta name="twitter:description" content="selenium模拟浏览器操作 在这部分开头我先贴出了自动执行填写健康信息的脚本，对于selenium较为详细的解析和使用指南放在了这一部分的后半段">
 <meta name="twitter:image" content="http://yangyh408.me/images/post_images/健康填报.png">
 
 
@@ -374,7 +374,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-19T11:38:45+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-19T11:43:12+08:00">
                 2020-03-19
               </time>
             
@@ -462,11 +462,10 @@
       
 
       
-        <p><img src="/images/post_images/健康填报.png" width="100%"></p>
-<div class="note info"><h2 id="selenium模拟浏览器操作"><a href="#selenium模拟浏览器操作" class="headerlink" title="selenium模拟浏览器操作"></a>selenium模拟浏览器操作</h2></div>
+        <p><img src="/images/post_images/健康填报.png" width="100%"><br><div class="note info"><h2 id="selenium模拟浏览器操作"><a href="#selenium模拟浏览器操作" class="headerlink" title="selenium模拟浏览器操作"></a>selenium模拟浏览器操作</h2></div></p>
 <p>在这部分开头我先贴出了自动执行填写健康信息的脚本，对于selenium较为详细的解析和使用指南放在了这一部分的后半段</p>
-<h3 id="selenium实战"><a href="#selenium实战" class="headerlink" title="selenium实战"></a>selenium实战</h3><p>为什么突然想到学习一波selenium的用法呢？<br>一方面是在爬虫学习中听说过有这么一款功能极强的浏览器操作模块，另一方面正赶上疫情爆发大家每天都要填报个人健康情况，对于大多数同学基本都能保持健康，每日填写信息也都大同小异，那为什么不让电脑每天自动帮我们上报呢？这样也能避免错过当天的填报时间。</p>
 <a id="more"></a>
+<h3 id="selenium实战"><a href="#selenium实战" class="headerlink" title="selenium实战"></a>selenium实战</h3><p>为什么突然想到学习一波selenium的用法呢？<br>一方面是在爬虫学习中听说过有这么一款功能极强的浏览器操作模块，另一方面正赶上疫情爆发大家每天都要填报个人健康情况，对于大多数同学基本都能保持健康，每日填写信息也都大同小异，那为什么不让电脑每天自动帮我们上报呢？这样也能避免错过当天的填报时间。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.options <span class="keyword">import</span> Options</span><br><span class="line"></span><br><span class="line">chrome_options = Options()</span><br><span class="line">chrome_options.add_argument(<span class="string">"--headless"</span>)</span><br><span class="line">driver = webdriver.Chrome(executable_path=<span class="string">"/usr/local/bin/chromedriver"</span>,options=chrome_options)</span><br><span class="line">driver.implicitly_wait(<span class="number">5</span>)</span><br><span class="line">url = <span class="string">"http://xgsys.swjtu.edu.cn/SPCP/Web/UserLogin.aspx"</span></span><br><span class="line">driver.get(url)</span><br><span class="line"></span><br><span class="line">value = &#123;</span><br><span class="line">    <span class="string">"StudentId"</span>: <span class="string">"这儿写学号"</span>,</span><br><span class="line">    <span class="string">"Name"</span>: <span class="string">"这儿写名字"</span>,</span><br><span class="line">    <span class="string">"StuCard"</span>: <span class="string">"这儿写身份证号后六位"</span>,</span><br><span class="line">    <span class="string">"codeInput"</span>:  driver.find_element_by_id(<span class="string">'code-box'</span>).text</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> value.keys():</span><br><span class="line">    element = driver.find_element_by_id(key)</span><br><span class="line">    element.send_keys(value[key])</span><br><span class="line">driver.find_element_by_id(<span class="string">'Button4'</span>).click()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> len(driver.find_elements_by_class_name(<span class="string">'layui-layer-content'</span>)) == <span class="number">0</span>:</span><br><span class="line">    driver.execute_script(<span class="string">'document.documentElement.scrollTop=10000'</span>)</span><br><span class="line">    driver.find_element_by_id(<span class="string">'Checkbox1'</span>).click()</span><br><span class="line">    driver.find_element_by_id(<span class="string">'Save_Btn'</span>).click()</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">driver.get_screenshot_as_file(<span class="string">"./screenshot.png"</span>)</span><br><span class="line">print(driver.find_element_by_class_name(<span class="string">'layui-layer-padding'</span>).text)</span><br><span class="line">driver.close()</span><br></pre></td></tr></table></figure>
 <h3 id="安装selenium"><a href="#安装selenium" class="headerlink" title="安装selenium"></a>安装selenium</h3><p>首先和安装其他python模块一样，使用pip来安装selenium库<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> selenium</span><br></pre></td></tr></table></figure></p>
 <p>因为selenium要控制浏览器进行操作，我们还需要下载浏览器的驱动以解析python发送给它的指令，根据浏览器的类型及版本选择不同驱动进行下载</p>
