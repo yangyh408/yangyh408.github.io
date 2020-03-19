@@ -199,7 +199,6 @@
 
 
 
-  <link rel="stylesheet" href="/dist/css/share.min.css">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -358,22 +357,14 @@
           <h1 class="post-title" itemprop="name headline">Colaboratory的使用</h1>
         
 
+
         <div class="post-meta">
+
+          
+
           <span class="post-time">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-08T20:44:10+08:00">
-                2019-04-08
-              </time>
-            
 
-            
-              <span class="post-meta-divider">|</span>
             
 
             
@@ -388,9 +379,21 @@
               </time>
             
           </span>
-          
-          
 
+          
+          
+          
+          
+             <span id="/2019/04/08/Colaboratory的使用/" class="leancloud_visitors" data-flag-title="Colaboratory的使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -400,6 +403,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+                <span class="post-meta-item-text">评论数:</span>
                 <a href="/2019/04/08/Colaboratory的使用/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/04/08/Colaboratory的使用/" itemprop="commentCount"></span>
                 </a>
@@ -407,8 +411,6 @@
             
           
 
-          
-          
 
           
 
@@ -475,30 +477,30 @@
 <ol>
 <li>检查GPU是否启用</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line">tf.test.gpu_device_name()</span><br></pre></td></tr></table></figure>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="title">tf</span>.test.gpu_device_name()</span><br></pre></td></tr></table></figure>
 <ol>
 <li>显示GPU详细信息</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from tensorflow.python.client import device_lib</span><br><span class="line">device_lib.list_local_devices()</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">from</span> <span class="selector-tag">tensorflow</span><span class="selector-class">.python</span><span class="selector-class">.client</span> <span class="selector-tag">import</span> <span class="selector-tag">device_lib</span></span><br><span class="line"><span class="selector-tag">device_lib</span><span class="selector-class">.list_local_devices</span>()</span><br></pre></td></tr></table></figure>
 <ol>
 <li>显示CPU详细信息</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!cat /proc/cpuinfo</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!cat /<span class="meta">proc</span>/cpuinfo</span><br></pre></td></tr></table></figure>
 <h1 id="使用Colab打开-py文件"><a href="#使用Colab打开-py文件" class="headerlink" title="使用Colab打开.py文件"></a>使用Colab打开.py文件</h1><div class="note info"><h3 id="转载说明"><a href="#转载说明" class="headerlink" title="转载说明"></a>转载说明</h3><p>该部分转载自[薅资本主义羊毛，用Google免费GPU][2]</p></div>
 <ol>
 <li>配置服务器</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">!apt-get install -y -qq software-properties-common python-software-properties module-init-tools</span><br><span class="line">!add-apt-repository -y ppa:alessandro-strada/ppa 2&gt;&amp;1 &gt; /dev/null</span><br><span class="line">!apt-get update -qq 2&gt;&amp;1 &gt; /dev/null</span><br><span class="line">!apt-get -y install -qq google-drive-ocamlfuse fuse</span><br><span class="line">from google.colab import auth</span><br><span class="line">auth.authenticate_user()</span><br><span class="line">from oauth2client.client import GoogleCredentials</span><br><span class="line">creds = GoogleCredentials.get_application_default()</span><br><span class="line">import getpass</span><br><span class="line">!google-drive-ocamlfuse -headless -id=&#123;creds.client_id&#125; -secret=&#123;creds.client_secret&#125; &lt; /dev/null 2&gt;&amp;1 | grep URL</span><br><span class="line">vcode = getpass.getpass()</span><br><span class="line">!echo &#123;vcode&#125; | google-drive-ocamlfuse -headless -id=&#123;creds.client_id&#125; -secret=&#123;creds.client_secret&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">!apt-get <span class="keyword">install</span> -y -qq software-properties-common python-software-properties <span class="keyword">module</span>-init-tools</span><br><span class="line">!<span class="keyword">add</span>-apt-repository -y ppa:alessandro-strada/ppa <span class="number">2</span>&gt;&amp;<span class="number">1</span> &gt; /dev/<span class="literal">null</span></span><br><span class="line">!apt-<span class="keyword">get</span> <span class="keyword">update</span> -qq <span class="number">2</span>&gt;&amp;<span class="number">1</span> &gt; /dev/<span class="literal">null</span></span><br><span class="line">!apt-<span class="keyword">get</span> -y <span class="keyword">install</span> -qq google-drive-ocamlfuse fuse</span><br><span class="line"><span class="keyword">from</span> google.colab <span class="keyword">import</span> auth</span><br><span class="line">auth.authenticate_user()</span><br><span class="line"><span class="keyword">from</span> oauth2client.client <span class="keyword">import</span> GoogleCredentials</span><br><span class="line">creds = GoogleCredentials.get_application_default()</span><br><span class="line"><span class="keyword">import</span> getpass</span><br><span class="line">!google-drive-ocamlfuse -headless -<span class="keyword">id</span>=&#123;creds.client_id&#125; -secret=&#123;creds.client_secret&#125; &lt; /dev/<span class="literal">null</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> | grep <span class="keyword">URL</span></span><br><span class="line">vcode = getpass.getpass()</span><br><span class="line">!echo &#123;vcode&#125; | google-drive-ocamlfuse -headless -<span class="keyword">id</span>=&#123;creds.client_id&#125; -secret=&#123;creds.client_secret&#125;</span><br></pre></td></tr></table></figure>
 <p>按步骤要求点击链接输入验证码即可</p>
 <ol>
 <li>授权完成后挂载GoogleDrive：</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">!mkdir -p drive</span><br><span class="line">!google-drive-ocamlfuse drive</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="addition">!mkdir -p drive</span></span><br><span class="line"><span class="addition">!google-drive-ocamlfuse drive</span></span><br></pre></td></tr></table></figure>
 <ol>
 <li>GoogleDrive文档打开位置</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /drive/xxx</span><br></pre></td></tr></table></figure>
-<h1 id="重置-reset-服务器"><a href="#重置-reset-服务器" class="headerlink" title="重置(reset)服务器"></a>重置(reset)服务器</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!kill -9 -1</span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">/drive/xxx</span></span><br></pre></td></tr></table></figure>
+<h1 id="重置-reset-服务器"><a href="#重置-reset-服务器" class="headerlink" title="重置(reset)服务器"></a>重置(reset)服务器</h1><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!kill <span class="number">-9</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -781,7 +783,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">10.5k</span>
+    <span title="Site words total count">10.6k</span>
   
 </div>
 
@@ -1309,6 +1311,113 @@
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("CAb6D9yQJY9JcNbLtYkKL2T1-gzGzoHsz", "96A6F5D4ftwQPWr5kaLeXUCg");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
 
   
 
@@ -1343,9 +1452,10 @@
 
   
 
-    <!-- 代码块复制功能 -->
-  <script type="text/javascript" src="/js/src/clipboard.js"></script>  
-  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
-  <script src="/dist/js/social-share.min.js"></script>
+
 </body>
+  <!-- 复制代码操作 -->
+ <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+ <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+ 
 </html>

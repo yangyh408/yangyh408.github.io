@@ -205,7 +205,6 @@
 
 
 
-  <link rel="stylesheet" href="/dist/css/share.min.css">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -364,22 +363,14 @@
           <h1 class="post-title" itemprop="name headline">DigitalOcean的使用</h1>
         
 
+
         <div class="post-meta">
+
+          
+
           <span class="post-time">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-09T12:42:06+08:00">
-                2019-04-09
-              </time>
-            
 
-            
-              <span class="post-meta-divider">|</span>
             
 
             
@@ -394,9 +385,21 @@
               </time>
             
           </span>
-          
-          
 
+          
+          
+          
+          
+             <span id="/2019/04/09/DigitalOcean的使用/" class="leancloud_visitors" data-flag-title="DigitalOcean的使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -406,6 +409,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+                <span class="post-meta-item-text">评论数:</span>
                 <a href="/2019/04/09/DigitalOcean的使用/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/04/09/DigitalOcean的使用/" itemprop="commentCount"></span>
                 </a>
@@ -413,8 +417,6 @@
             
           
 
-          
-          
 
           
 
@@ -482,13 +484,13 @@
 <p><img src="/images/post_images/DigitalOcean的使用-04.png" alt="该服务器已注销"></p>
 <div class="note info"><h2 id="登陆服务器"><a href="#登陆服务器" class="headerlink" title="登陆服务器"></a>登陆服务器</h2></div>
 <p>在终端中输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh Username @ IP Address</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh Username @<span class="built_in"> IP </span>Address</span><br></pre></td></tr></table></figure>
 <p><img src="/images/post_images/DigitalOcean的使用-05.png" alt="登陆"></p>
 <div class="note info"><h2 id="安装最新内核"><a href="#安装最新内核" class="headerlink" title="安装最新内核"></a>安装最新内核</h2></div>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --<span class="keyword">no</span>-check-certificate http<span class="variable">s:</span>//github.<span class="keyword">com</span>/teddysun/across/raw/master/bbr.<span class="keyword">sh</span> &amp;&amp; chmod +<span class="keyword">x</span> bbr.<span class="keyword">sh</span> &amp;&amp; ./bbr.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
 <p><img src="/images/post_images/DigitalOcean的使用-06.png" alt></p>
 <div class="note warning"><h2 id="安装脚本"><a href="#安装脚本" class="headerlink" title="安装脚本"></a>安装脚本</h2><p>加密类型选择:<br><strong>14）chacha20-ietf-poly1305</strong></p></div>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-libev-debian.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev-debian.sh</span><br><span class="line">chmod +x shadowsocks-libev-debian.sh</span><br><span class="line">./shadowsocks-libev-debian.sh 2&gt;&amp;1 | tee shadowsocks-libev-debian.log</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --<span class="keyword">no</span>-check-certificate -O shadowsocks-libev-debian.<span class="keyword">sh</span> http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/teddysun/shadowsocks_install/master/shadowsocks-libev-debian.<span class="keyword">sh</span></span><br><span class="line">chmod +<span class="keyword">x</span> shadowsocks-libev-debian.<span class="keyword">sh</span></span><br><span class="line">./shadowsocks-libev-debian.<span class="keyword">sh</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> | tee shadowsocks-libev-debian.<span class="built_in">log</span></span><br></pre></td></tr></table></figure>
 <p>稍等片刻，完成！</p>
 <p>详细信息可以查看<a href="https://teddysun.com/358.html" target="_blank" rel="noopener">秋水逸冰</a>的博文!</p>
 <div class="note info"><h2 id="导入Shadowsocks"><a href="#导入Shadowsocks" class="headerlink" title="导入Shadowsocks"></a>导入Shadowsocks</h2></div>
@@ -778,7 +780,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">10.5k</span>
+    <span title="Site words total count">10.6k</span>
   
 </div>
 
@@ -1306,6 +1308,113 @@
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("CAb6D9yQJY9JcNbLtYkKL2T1-gzGzoHsz", "96A6F5D4ftwQPWr5kaLeXUCg");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
 
   
 
@@ -1340,9 +1449,10 @@
 
   
 
-    <!-- 代码块复制功能 -->
-  <script type="text/javascript" src="/js/src/clipboard.js"></script>  
-  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
-  <script src="/dist/js/social-share.min.js"></script>
+
 </body>
+  <!-- 复制代码操作 -->
+ <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+ <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+ 
 </html>
