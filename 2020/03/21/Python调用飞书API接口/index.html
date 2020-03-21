@@ -138,15 +138,15 @@
 <meta property="og:site_name" content="YangYH408">
 <meta property="og:description" content="写在最前 飞书作为一款高效远程办公软件，在疫情期间凭借着人性化的UI交互以及稳定的远程联络能力深得各大企业的偏好。但在创建团队之初，难免遇到需要批量导入数据或者批量处理员工信息的情况，飞书为此提供了各种API接口以便集中处理这些情况，此文的目的也是为了让各位团队管理者能自如使用这些API接口。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yangyh408.me/2020/03/21/Python调用飞书API接口/images/post_images/Python调用飞书API接口-04.png">
-<meta property="og:image" content="http://yangyh408.me/2020/03/21/Python调用飞书API接口/images/post_images/Python调用飞书API接口-01.png">
-<meta property="og:image" content="http://yangyh408.me/2020/03/21/Python调用飞书API接口/images/post_images/Python调用飞书API接口-02.png">
-<meta property="og:image" content="http://yangyh408.me/2020/03/21/Python调用飞书API接口/images/post_images/Python调用飞书API接口-03.png">
-<meta property="og:updated_time" content="2020-03-21T13:36:38.924Z">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/Python调用飞书API接口-04.png">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/Python调用飞书API接口-01.png">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/Python调用飞书API接口-02.png">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/Python调用飞书API接口-03.png">
+<meta property="og:updated_time" content="2020-03-21T13:39:42.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python调用飞书API接口">
 <meta name="twitter:description" content="写在最前 飞书作为一款高效远程办公软件，在疫情期间凭借着人性化的UI交互以及稳定的远程联络能力深得各大企业的偏好。但在创建团队之初，难免遇到需要批量导入数据或者批量处理员工信息的情况，飞书为此提供了各种API接口以便集中处理这些情况，此文的目的也是为了让各位团队管理者能自如使用这些API接口。">
-<meta name="twitter:image" content="http://yangyh408.me/2020/03/21/Python调用飞书API接口/images/post_images/Python调用飞书API接口-04.png">
+<meta name="twitter:image" content="http://yangyh408.me/images/post_images/Python调用飞书API接口-04.png">
 
 
 
@@ -378,7 +378,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-21T21:36:38+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-21T21:39:42+08:00">
                 2020-03-21
               </time>
             
@@ -466,7 +466,7 @@
       
 
       
-        <p><img src="images/post_images/Python调用飞书API接口-04.png" width="100%"><br><div class="note success"><h2 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h2></div></p>
+        <p><img src="/images/post_images/Python调用飞书API接口-04.png" width="100%"><br><div class="note success"><h2 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h2></div></p>
 <p>飞书作为一款高效远程办公软件，在疫情期间凭借着人性化的UI交互以及稳定的远程联络能力深得各大企业的偏好。但在创建团队之初，难免遇到需要批量导入数据或者批量处理员工信息的情况，飞书为此提供了各种API接口以便集中处理这些情况，此文的目的也是为了让各位团队管理者能自如使用这些API接口。</p>
 <a id="more"></a>
 <div class="note info"><h2 id="Python调用API接口"><a href="#Python调用API接口" class="headerlink" title="Python调用API接口"></a>Python调用API接口</h2></div>
@@ -485,11 +485,11 @@
 <p>我们这里只介绍在企业管理中最常用到<strong>tenant_access_token</strong>的获取方式：</p>
 <ol>
 <li>管理后台创建企业自建应用</li>
-<li>记录应用凭证内<code>AppID</code>和<code>AppSecret</code>备用<br> <img src="images/post_images/Python调用飞书API接口-01.png" alt></li>
+<li>记录应用凭证内<code>AppID</code>和<code>AppSecret</code>备用<br> <img src="/images/post_images/Python调用飞书API接口-01.png" alt></li>
 <li>从左侧三种应用功能任选一种</li>
-<li>根据后续操作需要选择所需权限，具体权限内容参见<a href="https://open.feishu.cn/document/ukTMukTMukTM/uQjN3QjL0YzN04CN2cDN" target="_blank" rel="noopener">这里</a><br> <img src="images/post_images/Python调用飞书API接口-02.png" alt></li>
+<li>根据后续操作需要选择所需权限，具体权限内容参见<a href="https://open.feishu.cn/document/ukTMukTMukTM/uQjN3QjL0YzN04CN2cDN" target="_blank" rel="noopener">这里</a><br> <img src="/images/post_images/Python调用飞书API接口-02.png" alt></li>
 <li>发布应用（应用于所有部门）</li>
-<li>利用Request<a href="https://open.feishu.cn/document/ukTMukTMukTM/uADN14CM0UjLwQTN" target="_blank" rel="noopener">获取 app_access_token（企业自建应用）</a><br> <img src="images/post_images/Python调用飞书API接口-03.png" alt></li>
+<li>利用Request<a href="https://open.feishu.cn/document/ukTMukTMukTM/uADN14CM0UjLwQTN" target="_blank" rel="noopener">获取 app_access_token（企业自建应用）</a><br> <img src="/images/post_images/Python调用飞书API接口-03.png" alt></li>
 </ol>
 <h3 id="明确API调用顺序"><a href="#明确API调用顺序" class="headerlink" title="明确API调用顺序"></a>明确API调用顺序</h3><p>在这一部分我们以批量导入联系人为例<em>（文末有python代码）</em>：</p>
 <blockquote>
