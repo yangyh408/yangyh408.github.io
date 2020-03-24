@@ -152,7 +152,7 @@
 <meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-回归（Regression）问题-13.jpg">
 <meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-回归（Regression）问题-14.jpg">
 <meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-回归（Regression）问题-11.jpg">
-<meta property="og:updated_time" content="2020-03-23T15:55:35.391Z">
+<meta property="og:updated_time" content="2020-03-24T04:44:01.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习-回归问题(Regression)">
 <meta name="twitter:description" content="回归问题是什么 回归问题是机器学习三大基本模型中很重要的一环，其功能是建模和分析变量之间的关系。 回归问题多用来预测一个具体的数值，如预测房价、未来的天气情况等等。例如我们根据一个地区的若干年的PM2.5数值变化来估计某一天该地区的PM2.5值大小，预测值与当天实际数值大小越接近，回归分析算法的可信度越高。">
@@ -388,8 +388,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-23T23:55:35+08:00">
-                2020-03-23
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-24T12:44:01+08:00">
+                2020-03-24
               </time>
             
           </span>
@@ -439,7 +439,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.7k
+                  2.8k
                 </span>
               
 
@@ -455,7 +455,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  10
+                  11
                 </span>
               
             </div>
@@ -523,8 +523,9 @@ w_n\\
 \end{pmatrix}</script><p>我们需要把训练集(train_set)中输入输出数据转化成相应的矩阵形式，输出数据为列向量，输入数据每行排布计算一个输出值所需要的m个变量。</p>
 <h4 id="数据标准化"><a href="#数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h4><p><img src="/images/post_images/机器学习-回归（Regression）问题-01.jpg" width="75%"><br>如果两特征数值差异较大时，我们在计算梯度（之后会介绍）时将会如下<em>图1</em>所示，过程曲折耗时。为了消除此影响，保证每个变量对于预测结果的影响权重相同，我们通常<strong>将特征量化到统一的区间内</strong>，使得特征梯度变为<em>图2</em>所示的状态，量化的方法主要有两种：</p>
 <ul>
-<li><strong>Standardization（标准化）</strong><br>  把数据转化为区间在[-1,1]且服从标准正态分布的值：<script type="math/tex; mode=display">x_i^r = \frac{x_i^r-\mu_i}{\delta_i}</script>  其中$\mu$代表特征的均值，$\delta$代表特征的标准差</li>
-<li><strong>Normalization（归一化）</strong><br>  把数据转化为区间在[0,1]的分布：<script type="math/tex; mode=display">x_i^r = \frac{x_i^r-min(x_i)}{max(x_i)-min(x_i)}</script></li>
+<li><strong>（归一化）Normalization</strong><br>  把数据转化为区间在[0,1]的分布：<script type="math/tex; mode=display">x_i^r = \frac{x_i^r-min(x_i)}{max(x_i)-min(x_i)}</script></li>
+<li><strong>标准化（Standardization）</strong><br>  把数据转化为区间在[-1,1]且服从标准正态分布的值：<script type="math/tex; mode=display">x_i^r = \frac{x_i^r-\mu_i}{\delta_i}</script>  其中$\mu$代表特征的均值，$\delta$代表特征的标准差  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mean_x = np.mean(x, axis = <span class="number">0</span>)</span><br><span class="line">std_x = np.std(x, axis = <span class="number">0</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(x)):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(len(x[<span class="number">0</span>])):</span><br><span class="line">        <span class="keyword">if</span> std_x[j] != <span class="number">0</span>:</span><br><span class="line">            x[i][j] = (x[i][j] - mean_x[j]) / std_x[j]</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <div class="note warning"><h3 id="步骤三：损失函数-Loss-Funtion"><a href="#步骤三：损失函数-Loss-Funtion" class="headerlink" title="步骤三：损失函数 (Loss Funtion)"></a>步骤三：损失函数 (Loss Funtion)</h3></div>
 <p>何谓损失函数？说白了就是评价模型所产生的预测结果的一个函数，损失函数的反馈值是机器学习调整参数的重要依据。对于回归问题，我们通常采用以下几种损失函数：</p>
@@ -629,11 +630,13 @@ w_n\\
 <li>将训练结果应用于测试集。</li>
 </ol>
 <p><img src="/images/post_images/机器学习-回归（Regression）问题-11.jpg" width="75%"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line">x_train_set = x[: math.floor(len(x) * <span class="number">0.8</span>), :]</span><br><span class="line">y_train_set = y[: math.floor(len(y) * <span class="number">0.8</span>), :]</span><br><span class="line">x_validation = x[math.floor(len(x) * <span class="number">0.8</span>): , :]</span><br><span class="line">y_validation = y[math.floor(len(y) * <span class="number">0.8</span>): , :]</span><br></pre></td></tr></table></figure>
 <div class="note default"><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
 <li><a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2017/Lecture/Regression.pdf" target="_blank" rel="noopener">李宏毅机器学习课程</a></li>
 <li><a href="https://yoyoyohamapi.gitbooks.io/mit-ml/content/" target="_blank" rel="noopener">斯坦福机器学习笔记</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/61955391" target="_blank" rel="noopener">梯度下降算法</a></li>
 <li><a href="https://www.jiqizhixin.com/articles/2018-06-21-3" target="_blank" rel="noopener">常用的5个回归损失函数</a></li>
+<li><a href="https://www.cnblogs.com/jianxinzhou/p/4083921.html" target="_blank" rel="noopener">机器学习之正则化</a></li>
 <li><a href="https://github.com/exacity/deeplearningbook-chinese" target="_blank" rel="noopener">《深度学习》</a></li>
 </ol></div>
 
@@ -916,7 +919,7 @@ w_n\\
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">14.5k</span>
+    <span title="Site words total count">14.6k</span>
   
 </div>
 
