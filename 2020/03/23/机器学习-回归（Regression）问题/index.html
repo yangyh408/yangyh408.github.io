@@ -152,7 +152,7 @@
 <meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-回归（Regression）问题-13.jpg">
 <meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-回归（Regression）问题-14.jpg">
 <meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-回归（Regression）问题-11.jpg">
-<meta property="og:updated_time" content="2020-03-27T15:22:50.154Z">
+<meta property="og:updated_time" content="2020-03-31T04:25:01.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习-回归问题(Regression)">
 <meta name="twitter:description" content="回归问题是什么 回归问题是机器学习三大基本模型中很重要的一环，其功能是建模和分析变量之间的关系。 回归问题多用来预测一个具体的数值，如预测房价、未来的天气情况等等。例如我们根据一个地区的若干年的PM2.5数值变化来估计某一天该地区的PM2.5值大小，预测值与当天实际数值大小越接近，回归分析算法的可信度越高。">
@@ -388,8 +388,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-27T23:22:50+08:00">
-                2020-03-27
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-31T12:25:01+08:00">
+                2020-03-31
               </time>
             
           </span>
@@ -523,7 +523,7 @@ w_n\\
 \end{pmatrix}</script><p>我们需要把训练集(train_set)中输入输出数据转化成相应的矩阵形式，输出数据为列向量，输入数据每行排布计算一个输出值所需要的m个变量。</p>
 <h4 id="数据标准化"><a href="#数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h4><p><img src="/images/post_images/机器学习-回归（Regression）问题-01.jpg" width="75%"><br>如果两特征数值差异较大时，我们在计算梯度（之后会介绍）时将会如下<em>图1</em>所示，过程曲折耗时。为了消除此影响，保证每个变量对于预测结果的影响权重相同，我们通常<strong>将特征量化到统一的区间内</strong>，使得特征梯度变为<em>图2</em>所示的状态，量化的方法主要有两种：</p>
 <ul>
-<li><strong>（归一化）Normalization</strong><br>  把数据转化为区间在[0,1]的分布：<script type="math/tex; mode=display">x_i^r = \frac{x_i^r-min(x_i)}{max(x_i)-min(x_i)}</script></li>
+<li><strong>归一化（Normalization）</strong><br>  把数据转化为区间在[0,1]的分布：<script type="math/tex; mode=display">x_i^r = \frac{x_i^r-min(x_i)}{max(x_i)-min(x_i)}</script></li>
 <li><strong>标准化（Standardization）</strong><br>  把数据转化为区间在[-1,1]且服从标准正态分布的值：<script type="math/tex; mode=display">x_i^r = \frac{x_i^r-\mu_i}{\delta_i}</script>  其中$\mu$代表特征的均值，$\delta$代表特征的标准差  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mean_x = np.mean(x, axis = <span class="number">0</span>)</span><br><span class="line">std_x = np.std(x, axis = <span class="number">0</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(x)):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(len(x[<span class="number">0</span>])):</span><br><span class="line">        <span class="keyword">if</span> std_x[j] != <span class="number">0</span>:</span><br><span class="line">            x[i][j] = (x[i][j] - mean_x[j]) / std_x[j]</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -800,7 +800,7 @@ w_n\\
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -923,7 +923,7 @@ w_n\\
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">15.6k</span>
+    <span title="Site words total count">16.6k</span>
   
 </div>
 

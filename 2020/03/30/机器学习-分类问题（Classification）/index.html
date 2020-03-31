@@ -119,7 +119,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Python,MachineLearning,">
 
 
 
@@ -130,17 +130,27 @@
 
 
 
-<meta name="description" content="Coding the world!">
-<meta name="keywords" content="yangyh408">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YangYH408">
-<meta property="og:url" content="http://yangyh408.me/archives/2020/03/index.html">
+<meta name="description" content="分类问题概述 分类问题是我们日常生活中最常遇到的一类问题，比如垃圾邮件的分类，识别我们所看到的是汽车还是火车抑或是别的物体，再或者去医院医生诊断病人身体里的肿瘤是否是恶性的，这些问题全部都属于分类问题的范畴。那么我们在机器学习中遇到此类问题该怎么做呢？ 我们可能首先会想，为什么不能用之前线性回归的方法来处理分类问题呢？答案其实是可以，不过我们在计算损失函数时需要对预测值远远偏离真实值的对象进行打击">
+<meta name="keywords" content="Python,MachineLearning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习-分类问题（Classification）">
+<meta property="og:url" content="http://yangyh408.me/2020/03/30/机器学习-分类问题（Classification）/index.html">
 <meta property="og:site_name" content="YangYH408">
-<meta property="og:description" content="Coding the world!">
+<meta property="og:description" content="分类问题概述 分类问题是我们日常生活中最常遇到的一类问题，比如垃圾邮件的分类，识别我们所看到的是汽车还是火车抑或是别的物体，再或者去医院医生诊断病人身体里的肿瘤是否是恶性的，这些问题全部都属于分类问题的范畴。那么我们在机器学习中遇到此类问题该怎么做呢？ 我们可能首先会想，为什么不能用之前线性回归的方法来处理分类问题呢？答案其实是可以，不过我们在计算损失函数时需要对预测值远远偏离真实值的对象进行打击">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-分类问题（Classification）-01.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-分类问题（Classification）-02.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-分类问题（Classification）-03.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-分类问题（Classification）-04.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-分类问题（Classification）-07.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-分类问题（Classification）-08.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-分类问题（Classification）-05.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/机器学习-分类问题（Classification）-06.jpg">
+<meta property="og:updated_time" content="2020-03-31T04:29:20.138Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YangYH408">
-<meta name="twitter:description" content="Coding the world!">
+<meta name="twitter:title" content="机器学习-分类问题（Classification）">
+<meta name="twitter:description" content="分类问题概述 分类问题是我们日常生活中最常遇到的一类问题，比如垃圾邮件的分类，识别我们所看到的是汽车还是火车抑或是别的物体，再或者去医院医生诊断病人身体里的肿瘤是否是恶性的，这些问题全部都属于分类问题的范畴。那么我们在机器学习中遇到此类问题该怎么做呢？ 我们可能首先会想，为什么不能用之前线性回归的方法来处理分类问题呢？答案其实是可以，不过我们在计算损失函数时需要对预测值远远偏离真实值的对象进行打击">
+<meta name="twitter:image" content="http://yangyh408.me/images/post_images/机器学习-分类问题（Classification）-01.jpg">
 
 
 
@@ -170,14 +180,14 @@
 
 
 
-  <link rel="canonical" href="http://yangyh408.me/archives/2020/03/">
+  <link rel="canonical" href="http://yangyh408.me/2020/03/30/机器学习-分类问题（Classification）/">
 
 
 
 
 
 
-  <title>归档 | YangYH408</title>
+  <title>机器学习-分类问题（Classification） | YangYH408</title>
   
 
 
@@ -206,7 +216,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -321,212 +331,315 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yangyh408.me/2020/03/30/机器学习-分类问题（Classification）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杨宇豪">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/user-avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YangYH408">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">机器学习-分类问题（Classification）</h1>
         
+
+
+        <div class="post-meta">
+
           
-        
-        嗯..! 目前共计 14 篇日志。 继续努力。
-      </span>
 
-      
+          <span class="post-time">
+            
 
-        
-        
-        
+            
 
-        
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-31T12:29:20+08:00">
+                2020-03-31
+              </time>
+            
+          </span>
+
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2020">2020</h1>
-          </div>
-        
-        
+          
+          
+          
+             <span id="/2020/03/30/机器学习-分类问题（Classification）/" class="leancloud_visitors" data-flag-title="机器学习-分类问题（Classification）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <span class="post-meta-item-text">评论数:</span>
+                <a href="/2020/03/30/机器学习-分类问题（Classification）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/30/机器学习-分类问题（Classification）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/30/机器学习-分类问题（Classification）/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">机器学习-分类问题（Classification）</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  963
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-30T19:33:57+08:00" content="2020-03-30">
-          03-30
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/27/收集文档及提交名单统统计/" itemprop="url">
-              
-                <span itemprop="name">收集文档及提交名单统计</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-27T22:01:22+08:00" content="2020-03-27">
-          03-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/23/机器学习-回归（Regression）问题/" itemprop="url">
-              
-                <span itemprop="name">机器学习-回归问题(Regression)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-23T11:56:40+08:00" content="2020-03-23">
-          03-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <div class="note primary"><h2 id="分类问题概述"><a href="#分类问题概述" class="headerlink" title="分类问题概述"></a>分类问题概述</h2></div>
+<p>分类问题是我们日常生活中最常遇到的一类问题，比如垃圾邮件的分类，识别我们所看到的是汽车还是火车抑或是别的物体，再或者去医院医生诊断病人身体里的肿瘤是否是恶性的，这些问题全部都属于分类问题的范畴。那么我们在机器学习中遇到此类问题该怎么做呢？</p>
+<p>我们可能首先会想，为什么不能用之前线性回归的方法来处理分类问题呢？答案其实是可以，不过我们在计算损失函数时需要对预测值远远偏离真实值的对象进行打击。理由也很简单，因为这些过大的偏差会使我们的回归结果向减小这类偏差的方向移动，造成下图所示的结果。</p>
+<a id="more"></a>
+<p><img src="/images/post_images/机器学习-分类问题（Classification）-01.jpg" width="80%"></p>
+<p>很显然，这种做法并不是分类问题的最优解决方案，接下来我们研究一种可靠的分类问题的解法。</p>
+<div class="note info"><h2 id="二元分类问题（Binary-Classification）"><a href="#二元分类问题（Binary-Classification）" class="headerlink" title="二元分类问题（Binary Classification）"></a>二元分类问题（Binary Classification）</h2></div>
+<p>首先，我们从二元分类问题开始入手。何谓二元分类问题？通俗讲就是只有两个类别的分类问题，如是不是垃圾邮件，是不是恶性肿瘤这类非黑即白的问题，我们就称之为二元分类问题。</p>
+<div class="note warning"><h3 id="概率解法"><a href="#概率解法" class="headerlink" title="概率解法"></a>概率解法</h3></div>
+<p>如果有两个类别$C_1,C_2$，里面分别包含了$N_1,N_2$个元素。现从两个类别中随机挑出一个元素x，该元素x来自$C_1$的概率可由贝叶斯公式算出：</p>
+<script type="math/tex; mode=display">P(C_1|x)=\frac{P(x|C_1)P(C_1)}{P(x|C_1)P(C_1)+P(x|C_2)P(C_2)}</script><p>在这个公式中，$P(C_1),P(C_2)$的值显而易见：</p>
+<script type="math/tex; mode=display">P(C_1)=\frac{N_1}{N_1+N_2}\ ,\ P(C_2)=\frac{N_2}{N_1+N_2}</script><p>接着，我们假设元素x是从多维高斯分布（GaussianDistribution）中选取出来的，则有：</p>
+<script type="math/tex; mode=display">P(x|C_1)=f_{\mu_1,\Sigma_1}(x)=\frac{1}{(2\pi)^{D/2}}\frac{1}{|\Sigma_1|^{1/2}}e^{-\frac{1}{2}(x-\mu_1)^T\Sigma_1^{-1}(x-\mu_1)}</script><p><img src="/images/post_images/机器学习-分类问题（Classification）-02.jpg" width="80%"></p>
+<p>在这个表达式包含两个参数：<strong>均值$\mu$，协方差$\Sigma$</strong>，如果假设选取样本$x^{(i)}$相互独立，那么所有样本来自该集合概率为：</p>
+<script type="math/tex; mode=display">L(\mu,\Sigma)=\Pi_{i=1}^{m}f_{\mu,\Sigma}(x^{(i)})</script><p>由于样本$x^{(i)}$本来就是存在于集合中的，所以应该最大化这个概率，根据对数似然估计可得：</p>
+<script type="math/tex; mode=display">\mu^*,\Sigma^*=arg\ max_{\mu,\Sigma}\ L(\mu,\Sigma)</script><script type="math/tex; mode=display">\frac{\partial lnf}{\partial\mu}=0,\ \mu^*=\frac{1}{m}\sum_{i=1}^{m}x^{(i)}</script><script type="math/tex; mode=display">\frac{\partial{lnf}}{\partial{\Sigma}}=0,\ \Sigma^*=\frac{1}{m}\sum_{i=1}^{m}(x^{(i)}-\mu^*)^T(x^{(i)}-\mu^*)</script><p>通过对数似然估计我们可以求得$\mu,\Sigma$，进而计算出$P(x|C_1)$。同理我们用相同的方法亦可求得$P(x|C_2)$，最终得到$P(C_1|x)，P(C_2|x)$。</p>
+<div class="note warning"><h3 id="逻辑回归（Logestic-Regression）"><a href="#逻辑回归（Logestic-Regression）" class="headerlink" title="逻辑回归（Logestic Regression）"></a>逻辑回归（Logestic Regression）</h3></div>
+<p>我们将概率解法中的贝叶斯公式稍作变形可得：</p>
+<script type="math/tex; mode=display">P(C_1|x)=\frac{1}{1+\frac{P(x|C_2)P(C_2)}{P(x|C_1)P(C_1)}}=\frac{1}{1+e^{-z}}=\sigma(z)</script><p>这里的$\sigma(z)$是sigmoid函数，其中自变量z为：</p>
+<script type="math/tex; mode=display">z=ln\frac{P(x|C_1)P(C_1)}{P(x|C_2)P(C_2)}=ln\frac{P(x|C_1)}{P(x|C_2)}+ln\frac{N_1}{N_2}</script><p>对于不同的特征$x_i$，选择不同的$\Sigma_i$可能引入过多变量导致过拟合现象，因此我们对于所有特征选择相同的$\Sigma$和不同的$\mu_i$计算$P(x|C_i)$，则有:</p>
+<script type="math/tex; mode=display">z=(\mu_1-\mu_2)^T\Sigma^{-1}x-\frac{1}{2}\mu_1^T\Sigma^{-1}\mu_1+\frac{1}{2}\mu_2^T\Sigma^{-1}\mu_2+ln\frac{N_1}{N_2}</script><p>如果我们把x前的系数$(\mu_1-\mu_2)^T\Sigma^{-1}$看作参数向量$[\theta_1,\theta_2 \dots \theta_n]$，x后其他项看作常数$\theta_0$：</p>
+<script type="math/tex; mode=display">z=\theta^Tx+\theta_0</script><p>将上述公式整理后，即可得预测函数：</p>
+<script type="math/tex; mode=display">h_\theta(X)=\frac{1}{1+e^{-\theta^TX}}\in[0,1]</script><script type="math/tex; mode=display">\begin{equation}
+    y = \begin{cases}
+    0, & h_\theta(X)<0.5 \\
+    1, & h_\theta(X)\geq 0.5
+    \end{cases}
+    \end{equation}</script><p><img src="/images/post_images/机器学习-分类问题（Classification）-03.jpg" width="80%"></p>
+<div class="note warning"><h3 id="损失函数（Cost-Function）"><a href="#损失函数（Cost-Function）" class="headerlink" title="损失函数（Cost Function）"></a>损失函数（Cost Function）</h3></div>
+<p>在分类问题中，我们采用交叉熵作为损失函数，表达式为：</p>
+<script type="math/tex; mode=display">\begin{equation}
+    Cost(h_{\theta}(x),\hat{y})=\begin{cases}
+    -log(1-h_{\theta}(x)), & \hat{y}=0 \\
+    -log(h_{\theta}(x)), & \hat{y}=1
+    \end{cases}
+    \end{equation}</script><p>从函数图像中，我们更能直观理解交叉熵函数是怎样运作的</p>
+<script type="math/tex; mode=display">\hat{y}=0，\begin{cases}
+Cost(h,x)\rightarrow0, & h_\theta(x)\rightarrow0 \\
+Cost(h,x)\rightarrow\infty, & h_\theta(x)\rightarrow1
+\end{cases}</script><script type="math/tex; mode=display">\hat{y}=1，\begin{cases}
+Cost(h,x)\rightarrow\infty, & h_\theta(x)\rightarrow0 \\
+Cost(h,x)\rightarrow0, & h_\theta(x)\rightarrow1
+\end{cases}</script><p><img src="/images/post_images/机器学习-分类问题（Classification）-04.jpg" width="80%"></p>
+<p>很显然，这也是符合我们预期的，当预测值和真实值相近时损失函数较小，当预测值和真实值相差接近1时损失函数值很大。于是，我们将上述两式合并起来写如一个表达式中，即得二元分类下的<strong>交叉熵损失函数（Cross Entropy Error）</strong>：</p>
+<script type="math/tex; mode=display">J(\theta)=\frac{1}{m}\sum_{i=1}^{m}Cost(h_{\theta}(x^{(i)}),\hat{y^{(i)}})</script><script type="math/tex; mode=display">Cost(h_{\theta}(x^{(i)}),\hat{y^{(i)}})=-\hat{y^{(i)}}log(-h_{\theta}(x^{(i)}))-(1-\hat{y^{(i)}})log(1-h_{\theta}(x^{(i)}))</script><p>写做矩阵形式为：</p>
+<script type="math/tex; mode=display">J(\theta)=-\frac{1}{m}[y^Tlog(h_\theta(X))+(1-y)^Tlog(h_\theta(X))]</script><p>为什么不用平方代价函数了呢？从函数图像中可以很清楚的得知原因。平方代价函数的梯度在接近目标值时趋近于零，但在离目标值很远的时候梯度仍然趋近于零，这就有可能导致我们无法用梯度下降的方法来优化参数向靠近目标值的方向移动。然而交叉熵代价函数在远离目标值时会提供一个很大的梯度值，越靠近目标值相应梯度越小直至趋近于零，这显然是符合梯度下降步长要求的。</p>
+<p><img src="/images/post_images/机器学习-分类问题（Classification）-07.jpg" width="80%"></p>
+<div class="note warning"><h3 id="梯度下降（Gradient-Descent）"><a href="#梯度下降（Gradient-Descent）" class="headerlink" title="梯度下降（Gradient Descent）"></a>梯度下降（Gradient Descent）</h3></div>
+<p>我们仍然采用梯度下降的方法来最优化参数向量$\theta$，求偏导后我们得到更新公式为：</p>
+<script type="math/tex; mode=display">\theta_j:=\theta_j-\alpha\frac{\partial J(\theta)}{\partial \theta_j}=\theta_j-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}</script><p>写作矩阵形式为：</p>
+<script type="math/tex; mode=display">\theta:=\theta-\alpha\frac{1}{m}X^T(h_\theta(X)-y)</script><p>除了梯度下降外，还有些更加复杂的优化算法，但实现起来比较困难。不过在<code>octave</code>中内置了最小化无约束多变量函数<code>fminunc</code>可以帮助我们快速实现求解函数最小值的功能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 构建一个函数返回损失函数值和梯度</span><br><span class="line">function [jVal, gradient] = costFunction(theta)</span><br><span class="line">  jVal = [...code to compute J(theta)...];</span><br><span class="line">  gradient = [...code to compute derivative of J(theta)...];</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">#使用fminunc计算最小值functionVal和最小值对应的参数向量optTheta</span><br><span class="line">options = optimset(&apos;GradObj&apos;, &apos;on&apos;, &apos;MaxIter&apos;, 100);</span><br><span class="line">initialTheta = zeros(2,1);</span><br><span class="line">[optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);</span><br></pre></td></tr></table></figure>
+<div class="note warning"><h3 id="正则化（Regulation）"><a href="#正则化（Regulation）" class="headerlink" title="正则化（Regulation）"></a>正则化（Regulation）</h3></div>
+<p>关于正则化已经在<a href="https://yangyh408.me/2020/03/23/机器学习-回归（Regression）问题/">上一篇博文</a>中详细介绍过，概括来说通过正则化的方法可以简化我们的预测函数，降低在梯度下降过程中发生过拟合现象的风险，正则化后的逻辑回归表达式为：</p>
+<script type="math/tex; mode=display">J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}(\hat{y^{(i)}}log(-h_{\theta}(x^{(i)}))+(1-\hat{y^{(i)}})log(1-h_{\theta}(x^{(i)})))+\frac{\lambda}{2m}\sum_{j=1}^{n}\theta_j^2</script><script type="math/tex; mode=display">\theta_0:=\theta_0-\alpha\frac{1}{m}\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_0^{(i)}</script><script type="math/tex; mode=display">\theta_j:=\theta_j-\alpha\frac{1}{m}[\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}]+\frac{\lambda}{m}\theta_j</script><p>需要特别注意的是——只需要将$\theta_1,\theta_2,\dots,\theta_n$进行正规化，而<strong>$\theta_0$不需要正规化</strong>！</p>
+<div class="note info"><h2 id="多元分类问题（Muti-Classification）"><a href="#多元分类问题（Muti-Classification）" class="headerlink" title="多元分类问题（Muti-Classification）"></a>多元分类问题（Muti-Classification）</h2></div>
+<p>了解了二元分类问题，我们接着简单分析一下多元分类问题。对于多分类问题通常有两种解法：</p>
+<ol>
+<li>将多分类问题划分成n个二分类问题</li>
+<li>softmax函数替代sigmoid函数作为预测函数</li>
+</ol>
+<h3 id="转化为二元分类问题"><a href="#转化为二元分类问题" class="headerlink" title="转化为二元分类问题"></a>转化为二元分类问题</h3><p>这种做法的思路很简单，即单独取出一类，并把其他n-1类共同划分为一类应用二元分类问题求出属于该类的概率；同理再将剩下n-1类用同样的方法算出概率，选择概率最大的一类作为预测结果即可。</p>
+<p><img src="/images/post_images/机器学习-分类问题（Classification）-08.jpg" width="80%"></p>
+<h3 id="softmax函数"><a href="#softmax函数" class="headerlink" title="softmax函数"></a>softmax函数</h3><p>第二种方法则用到了在神经网络中经常用于处理输出层的softmax函数，这里只做简要介绍。</p>
+<p>softmax是指数归一化函数，表达式为：</p>
+<script type="math/tex; mode=display">Softmax(x_i)=\frac{e^{x_i}}{\sum_{j=1}^{n}e^{x_j}}</script><p>在多元分类问题中常用<code>softmax + crossEntropy</code>的组合去处理分类问题，写成矩阵形式为：</p>
+<script type="math/tex; mode=display">J(\theta) = -y^Tlog\ Softmax(X\theta)</script><p>对向量$\theta$求导可以得到：</p>
+<script type="math/tex; mode=display">\frac{\partial J}{\partial \theta}=X^T(Softmax(X\theta)-y)</script><p>接着使用梯度下降或者其他高级优化算法迭代求解即可。</p>
+<div class="note info"><h2 id="Logestic-Regression存在的问题"><a href="#Logestic-Regression存在的问题" class="headerlink" title="Logestic Regression存在的问题"></a>Logestic Regression存在的问题</h2></div>
+<p>就目前而言，逻辑回归还是存在一些情况没有办法处理，就拿逻辑运算异或（XOR）来说，如果将它表示在平面坐标内（如下图一），可以看出无论用直线怎么分割都不可能将y=1和y=0的两部分恰好划分在直线两侧。<br>解决这个问题的方法是对原本的输入特征$x_1,x_2$进行特征变换，用$x_1’$表示原特征点到[0,0]的距离，$x_2’$表示原特征点到[1,1]的距离，经过这样的变换后特征点的分布变为下图二，这样我们就很容易可以找到一条直线将y=1，y=0区分开。</p>
+<p><img src="/images/post_images/机器学习-分类问题（Classification）-05.jpg" width="80%"></p>
+<p>但实际情况是，特征量特别庞大的情况下，我们很难或者说几乎不可能找到一种能把特征区分开的良好的变换规则。于是，我们考虑通过嵌套多层sigmoid函数让程序自己进行特征变换，于是就产生了在机器学习中我们所说的<code>神经网络（NeuralNetwork）</code>。</p>
+<p><img src="/images/post_images/机器学习-分类问题（Classification）-06.jpg" width="80%"></p>
+<div class="note default"><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.coursera.org/learn/machine-learning/home/week/3" target="_blank" rel="noopener">AndrewNG机器学习</a><br><a href="https://www.youtube.com/watch?v=fZAZUYEeIMg&amp;feature=youtu.be" target="_blank" rel="noopener">LeeHungyi机器学习</a><br><a href="https://zhuanlan.zhihu.com/p/24709748" target="_blank" rel="noopener">矩阵求导方法</a><br><a href="https://www.cnblogs.com/jermmyhsu/p/8251013.html" target="_blank" rel="noopener">多维高斯分布</a><br><a href="https://www.cnblogs.com/jiashun/p/CrossEntropyLoss.html" target="_blank" rel="noopener">交叉熵损失函数</a><br><a href="https://www.jianshu.com/p/c02a1fbffad6" target="_blank" rel="noopener">softmax交叉熵损失函数求导</a><br><a href="https://www.cnblogs.com/Deep-Learning/p/7073744.html" target="_blank" rel="noopener">softmax回归</a></p></div>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/21/Python调用飞书API接口/" itemprop="url">
-              
-                <span itemprop="name">Python调用飞书API接口</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-21T18:16:20+08:00" content="2020-03-21">
-          03-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/18/selenium实现自动健康填报/" itemprop="url">
-              
-                <span itemprop="name">selenium实现自动健康填报</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-03-18T00:00:00+08:00" content="2020-03-18">
-          03-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    杨宇豪
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yangyh408.me/2020/03/30/机器学习-分类问题（Classification）/" title="机器学习-分类问题（Classification）">http://yangyh408.me/2020/03/30/机器学习-分类问题（Classification）/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+            <a href="/tags/MachineLearning/" rel="tag"><i class="fa fa-tag"></i> MachineLearning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/27/收集文档及提交名单统统计/" rel="next" title="收集文档及提交名单统计">
+                <i class="fa fa-chevron-left"></i> 收集文档及提交名单统计
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e7211c221e0012d" async="async"></script>
+</div>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -534,6 +647,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -554,8 +674,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -642,6 +771,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分类问题概述"><span class="nav-number">1.</span> <span class="nav-text">分类问题概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二元分类问题（Binary-Classification）"><span class="nav-number">2.</span> <span class="nav-text">二元分类问题（Binary Classification）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概率解法"><span class="nav-number">2.1.</span> <span class="nav-text">概率解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑回归（Logestic-Regression）"><span class="nav-number">2.2.</span> <span class="nav-text">逻辑回归（Logestic Regression）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#损失函数（Cost-Function）"><span class="nav-number">2.3.</span> <span class="nav-text">损失函数（Cost Function）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降（Gradient-Descent）"><span class="nav-number">2.4.</span> <span class="nav-text">梯度下降（Gradient Descent）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则化（Regulation）"><span class="nav-number">2.5.</span> <span class="nav-text">正则化（Regulation）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多元分类问题（Muti-Classification）"><span class="nav-number">3.</span> <span class="nav-text">多元分类问题（Muti-Classification）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#转化为二元分类问题"><span class="nav-number">3.1.</span> <span class="nav-text">转化为二元分类问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#softmax函数"><span class="nav-number">3.2.</span> <span class="nav-text">softmax函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Logestic-Regression存在的问题"><span class="nav-number">4.</span> <span class="nav-text">Logestic Regression存在的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -812,6 +957,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
