@@ -119,7 +119,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Python,MachineLearning,">
 
 
 
@@ -130,17 +130,29 @@
 
 
 
-<meta name="description" content="Coding the world!">
-<meta name="keywords" content="yangyh408">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YangYH408">
-<meta property="og:url" content="http://yangyh408.me/page/2/index.html">
+<meta name="description" content="神经网络初步 神经网络（Neural Network）是机器学习众多算法中的一种，其原理是模仿人脑内神经元之间信息的处理方式，希望借此完成回归模型和分类模型所难以实现的非线性预测。简单来说，你可以将神经网络看作一个复杂的多层复合函数，输入数据通过多层函数的嵌套计算从而求得预测结果。换个角度也可以把多层神经网络理解为将输入数据做多层特征变换的过程。 神经网络通常由三部分组成:输入层、隐藏层、输出层。">
+<meta name="keywords" content="Python,MachineLearning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="神经网络(Nueral Network)">
+<meta property="og:url" content="http://yangyh408.me/2020/04/11/神经网络-Nueral-Network/index.html">
 <meta property="og:site_name" content="YangYH408">
-<meta property="og:description" content="Coding the world!">
+<meta property="og:description" content="神经网络初步 神经网络（Neural Network）是机器学习众多算法中的一种，其原理是模仿人脑内神经元之间信息的处理方式，希望借此完成回归模型和分类模型所难以实现的非线性预测。简单来说，你可以将神经网络看作一个复杂的多层复合函数，输入数据通过多层函数的嵌套计算从而求得预测结果。换个角度也可以把多层神经网络理解为将输入数据做多层特征变换的过程。 神经网络通常由三部分组成:输入层、隐藏层、输出层。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-01.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-02.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-03.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-04.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-05.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-06.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-07.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-08.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-09.jpg">
+<meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-10.jpg">
+<meta property="og:updated_time" content="2020-04-11T14:18:23.785Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YangYH408">
-<meta name="twitter:description" content="Coding the world!">
+<meta name="twitter:title" content="神经网络(Nueral Network)">
+<meta name="twitter:description" content="神经网络初步 神经网络（Neural Network）是机器学习众多算法中的一种，其原理是模仿人脑内神经元之间信息的处理方式，希望借此完成回归模型和分类模型所难以实现的非线性预测。简单来说，你可以将神经网络看作一个复杂的多层复合函数，输入数据通过多层函数的嵌套计算从而求得预测结果。换个角度也可以把多层神经网络理解为将输入数据做多层特征变换的过程。 神经网络通常由三部分组成:输入层、隐藏层、输出层。">
+<meta name="twitter:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-01.jpg">
 
 
 
@@ -170,14 +182,14 @@
 
 
 
-  <link rel="canonical" href="http://yangyh408.me/page/2/">
+  <link rel="canonical" href="http://yangyh408.me/2020/04/11/神经网络-Nueral-Network/">
 
 
 
 
 
 
-  <title>YangYH408</title>
+  <title>神经网络(Nueral Network) | YangYH408</title>
   
 
 
@@ -206,8 +218,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -321,9 +332,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -336,7 +347,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangyh408.me/2019/04/08/阶梯博弈/">
+    <link itemprop="mainEntityOfPage" href="http://yangyh408.me/2020/04/11/神经网络-Nueral-Network/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨宇豪">
@@ -353,9 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/08/阶梯博弈/" itemprop="url">阶梯博弈</a></h1>
+          <h1 class="post-title" itemprop="name headline">神经网络(Nueral Network)</h1>
         
 
 
@@ -375,8 +384,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-18T22:48:55+08:00">
-                2020-03-18
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-11T22:18:23+08:00">
+                2020-04-11
               </time>
             
           </span>
@@ -385,7 +394,7 @@
           
           
           
-             <span id="/2019/04/08/阶梯博弈/" class="leancloud_visitors" data-flag-title="阶梯博弈">
+             <span id="/2020/04/11/神经网络-Nueral-Network/" class="leancloud_visitors" data-flag-title="神经网络(Nueral Network)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -405,8 +414,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <span class="post-meta-item-text">评论数:</span>
-                <a href="/2019/04/08/阶梯博弈/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/08/阶梯博弈/" itemprop="commentCount"></span>
+                <a href="/2020/04/11/神经网络-Nueral-Network/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/11/神经网络-Nueral-Network/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -426,7 +435,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  838
+                  3.5k
                 </span>
               
 
@@ -442,7 +451,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  13
                 </span>
               
             </div>
@@ -463,604 +472,174 @@
       
 
       
-        
-          <h1 id="阶梯博弈"><a href="#阶梯博弈" class="headerlink" title="阶梯博弈"></a>阶梯博弈</h1><h2 id="阐述"><a href="#阐述" class="headerlink" title="阐述"></a>阐述</h2><p>阶梯博弈也是博弈论中重要的一个分支，所谓阶梯博弈，其实指代的是一类只能从后向前逐层传递石子的游戏的模型，同样的，这类问题也可以转化成NIM取石子问题求解</p>
-<h2 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h2><p>前五堆石子分别有2,1,3,1,4个石子，每个人只能把后面的任意多个石子向前移，不能移动者为负，现在问先手必胜还是必败？</p>
-        
-        
-
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/08/阶梯博弈/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangyh408.me/2019/04/08/Colaboratory的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="杨宇豪">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/user-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YangYH408">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/08/Colaboratory的使用/" itemprop="url">Colaboratory的使用</a></h1>
-        
-
-
-        <div class="post-meta">
-
-          
-
-          <span class="post-time">
-            
-
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-18T22:48:55+08:00">
-                2020-03-18
-              </time>
-            
-          </span>
-
-          
-          
-          
-          
-             <span id="/2019/04/08/Colaboratory的使用/" class="leancloud_visitors" data-flag-title="Colaboratory的使用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <span class="post-meta-item-text">评论数:</span>
-                <a href="/2019/04/08/Colaboratory的使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/08/Colaboratory的使用/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  420
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Google备份与同步"><a href="#Google备份与同步" class="headerlink" title="Google备份与同步"></a>Google备份与同步</h1><p>在使用Colaboratory之前，由于涉及GoogleDrive的文档同步，需要在电脑上安装Google备份与同步软件</p>
-<h2 id="GoogleDrive安装"><a href="#GoogleDrive安装" class="headerlink" title="GoogleDrive安装"></a>GoogleDrive安装</h2><p><a href="https://www.google.com/intl/zh-CN_ALL/drive/download/backup-and-sync/" target="_blank" rel="noopener">https://www.google.com/intl/zh-CN_ALL/drive/download/backup-and-sync/</a></p>
-        
-        
-
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/08/Colaboratory的使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangyh408.me/2019/04/08/venv的安装和使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="杨宇豪">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/user-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YangYH408">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/08/venv的安装和使用/" itemprop="url">venv的安装和使用</a></h1>
-        
-
-
-        <div class="post-meta">
-
-          
-
-          <span class="post-time">
-            
-
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-18T22:48:55+08:00">
-                2020-03-18
-              </time>
-            
-          </span>
-
-          
-          
-          
-          
-             <span id="/2019/04/08/venv的安装和使用/" class="leancloud_visitors" data-flag-title="venv的安装和使用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <span class="post-meta-item-text">评论数:</span>
-                <a href="/2019/04/08/venv的安装和使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/08/venv的安装和使用/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  94
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="安装venv"><a href="#安装venv" class="headerlink" title="安装venv"></a>安装venv</h1><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 <span class="keyword">install</span> virtualenv</span><br></pre></td></tr></table></figure>
-<h1 id="venv的使用"><a href="#venv的使用" class="headerlink" title="venv的使用"></a>venv的使用</h1><ul>
-<li>在当前目录创建虚拟环境</li>
+        <div class="note info"><h2 id="神经网络初步"><a href="#神经网络初步" class="headerlink" title="神经网络初步"></a>神经网络初步</h2></div>
+<p>神经网络（Neural Network）是机器学习众多算法中的一种，其原理是模仿人脑内神经元之间信息的处理方式，希望借此完成回归模型和分类模型所难以实现的非线性预测。简单来说，你可以将神经网络看作一个复杂的多层复合函数，输入数据通过多层函数的嵌套计算从而求得预测结果。换个角度也可以把多层神经网络理解为将输入数据做多层特征变换的过程。</p>
+<p>神经网络通常由三部分组成:<code>输入层</code>、<code>隐藏层</code>、<code>输出层</code>。其中隐藏层可以有多层，各层间的单元通过参数$\theta$和激活函数$\sigma$相连接，结构如下图所示：</p>
+<a id="more"></a>
+<ul>
+<li>$a_i^{(l)}$表示第l层的i号元素</li>
+<li>$\theta_{ij}^{(l)}$表示连接第l+1层i号元素和第l层j号元素间的参数</li>
 </ul>
-<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m venv .</span><br></pre></td></tr></table></figure>
-        
-        
-
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/08/venv的安装和使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangyh408.me/2019/04/08/快速线性筛法求素数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="杨宇豪">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/user-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YangYH408">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/08/快速线性筛法求素数/" itemprop="url">快速线性筛法求素数</a></h1>
-        
-
-
-        <div class="post-meta">
-
-          
-
-          <span class="post-time">
-            
-
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-18T22:48:55+08:00">
-                2020-03-18
-              </time>
-            
-          </span>
-
-          
-          
-          
-          
-             <span id="/2019/04/08/快速线性筛法求素数/" class="leancloud_visitors" data-flag-title="快速线性筛法求素数">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <span class="post-meta-item-text">评论数:</span>
-                <a href="/2019/04/08/快速线性筛法求素数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/08/快速线性筛法求素数/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.2k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="筛法求素数"><a href="#筛法求素数" class="headerlink" title="筛法求素数"></a>筛法求素数</h1><h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><p>说到求素数，其实在刚开始学C++的时候就已经见过诸如此类的问题，不过现在最常见的还是筛法求素数</p>
-<p>谈及筛法求素数，其大致思路可分为如下五步：</p>
+<p><img src="\images\post_images\神经网络(Nueral Network)-01.jpg" width="80%"></p>
+<p>各层之间的连接关系可表示为：</p>
+<script type="math/tex; mode=display">z^{(l+1)}=\theta^{(l)}*a^{(l)}</script><script type="math/tex; mode=display">a^{(l+1)} = \sigma(z^{(l+1)})</script><div class="note info"><h2 id="神经网络的实现"><a href="#神经网络的实现" class="headerlink" title="神经网络的实现"></a>神经网络的实现</h2></div>
+<p>上一节我们构建了一个简单的全连接神经元网络，并且了解了各层之间是通过怎样的连接方式相互关联起来的。那么我们如何来训练这个神经元网络呢？与线性回归模型和分类模型类似，我们先从损失函数入手。</p>
+<ul>
+<li>$L$表示神经网络总层数</li>
+<li>$S_l$表示第l层元素个数(不包括偏差元素$a_0^{(l)}$)</li>
+<li>$\delta_i^{(l)}$表示第l层i号元素与真实值再此节点的差值</li>
+<li>$x^{(i)},\hat{y^{(i)}}$表示一组训练输入和输出</li>
+</ul>
+<div class="note warning"><h3 id="损失函数-Cost-Function"><a href="#损失函数-Cost-Function" class="headerlink" title="损失函数 (Cost Function)"></a>损失函数 (Cost Function)</h3></div>
+<p>神经网络中经常使用的损失函数仍然为交叉熵函数(CrossEntropy)，它可以视为范化的逻辑回归损失函数，表示为：</p>
+<script type="math/tex; mode=display">J(\theta)=-\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{S_L}y_k^{(i)}log(h_\theta(x^{(i)}))_k+(1-y_k^{(i)})log(1-h_\theta(x^{(i)}))_k</script><p>如果使用正则化处理，则还需增加正则化项：</p>
+<script type="math/tex; mode=display">\frac{\lambda}{2m}\sum_{l=1}^{L-1}\sum_{j=1}^{S_l}\sum_{i=1}^{S_{l+1}}(\theta_{ij}^{(l)})^2</script><p>注意和之前正则化操作强调的相同：在正则化项中不包括$\theta_{i0}^{(l)}$这些连接偏差项的参数。</p>
+<div class="note warning"><h3 id="反向传播-Backpropagation"><a href="#反向传播-Backpropagation" class="headerlink" title="反向传播 (Backpropagation)"></a>反向传播 (Backpropagation)</h3></div>
+<p>反向传播是一种用于神经网络快捷求解参数梯度的方法。由于连接了很多层参数，我们在计算梯度时需要多次采用链式法则，这里用神经网络中的某一部分来举例如何计算梯度：</p>
+<p><img src="\images\post_images\神经网络(Nueral Network)-02.jpg" width="80%"></p>
+<script type="math/tex; mode=display">\frac{\partial J}{\partial \theta_1}= \frac{\partial J}{\partial z} \frac{\partial z}{\partial \theta_1}=\frac{\partial J}{\partial z}*a_1</script><script type="math/tex; mode=display">\frac{\partial J}{\partial z}=\frac{\partial J}{\partial a}\frac{\partial a}{\partial z}=(\frac{\partial J}{\partial z'}\frac{\partial z'}{\partial a}+\frac{\partial J}{\partial z''}\frac{\partial z''}{\partial a})\sigma'(z)=\sigma'(z)(\theta_3\frac{\partial J}{\partial z'}+\theta_4\frac{\partial J}{\partial z''})</script><p>不难看出，只要我们求出$\frac{\partial J}{\partial z’’}$和$\frac{\partial J}{\partial z’’}$就能算出损失函数对$\theta_1$的梯度。除了顺序使用递归求解外，如果我们从输出层开始反向逐层计算梯度，则可直接求解，这便是反向传播。</p>
+<h4 id="梯度计算"><a href="#梯度计算" class="headerlink" title="梯度计算"></a>梯度计算</h4><p>综上所述，我们可以得出反向传播求解梯度的步骤为：</p>
 <ol>
-<li>把2到n的自然数放入a[2]到a[n]中(所放入的数与下标号相同) ;</li>
-<li>在数组元素中以下标为序，按顺序找到未曾找过的最小素数minp和它的位置p(即下标号);</li>
-<li>从p+1开始，把凡是能被minp整除的各元素值从a数组中划去(筛掉)，也就是把该元素标记为0;
-        
-        
-
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/08/快速线性筛法求素数/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<li>设置输入层：<script type="math/tex; mode=display">a^{(1)}=x^{(i)},i=1,2,\dots,m</script></li>
+<li>前向传播逐层计算元素值：<script type="math/tex; mode=display">a^{(l+1)}=\sigma(\theta^{(l)}*a^{(l)})</script></li>
+<li>计算输出层差值：<script type="math/tex; mode=display">\delta^{(L)}=a^{(L)}-\hat{y^{(i)}}</script></li>
+<li>反向传播计算$\delta^{(L-1)},\delta^{(L-2)},\dots,\delta^{(2)}$:<script type="math/tex; mode=display">\delta^{(l)}=((\theta^{(l)})^T\delta^{(l+1)})*\sigma'(z^{(l)})</script></li>
+<li>计算梯度<strong>(计算时要去除l+1层的偏差差值$\delta_0^{(l+1)}$)</strong>：<script type="math/tex; mode=display">\Delta^{(l)}=\Delta^{(l)} + \delta^{(l+1)}(a^{(l)})^T</script><script type="math/tex; mode=display">\frac{\partial}{\partial \theta_{ij}^{(l)}}J(\theta)=\begin{cases}
+\frac{1}{m}\Delta_{ij}^{(l)}, & j=0 \\
+\frac{1}{m}\Delta_{ij}^{(l)}+\frac{\lambda}{m}\theta_{ij}^{(l)}, &j\not= 0
+ \end{cases}</script></li>
+</ol>
+<h4 id="验证梯度"><a href="#验证梯度" class="headerlink" title="验证梯度"></a>验证梯度</h4><p>我们在使用反向传播计算梯度后，如果要检验梯度计算是否正确，可以采用以下的数值计算方法（即根据梯度的定义）：</p>
+<script type="math/tex; mode=display">\frac{\partial}{\partial \theta}J(\theta) \approx \frac{J(\theta+\epsilon)-J(\theta-\epsilon)}{2\epsilon},\ \epsilon=10^{-4}</script><p><img src="\images\post_images\神经网络(Nueral Network)-03.jpg" width="80%"></p>
+<h4 id="参数初始化"><a href="#参数初始化" class="headerlink" title="参数初始化"></a>参数初始化</h4><p>在回归问题和分类问题的梯度计算中，我们通常将参数初始化为0，但我们却不能在神经网络中沿用从做法。原因很简单，如果我们初始化参数为相同的值，那么在进行反向传播后每层参数的更新也都是相同的，这样神经网络就被降维成了一系列节点使神经网络失效，为了打破这种参数更新的对称性，我们要随机初始化参数矩阵，即：</p>
+<script type="math/tex; mode=display">random(-\epsilon \leq \theta \leq \epsilon)，\ \epsilon = 0.12</script><p>其中随机范围$\epsilon$也可以根据参数连接的两层元素个数选取，公式为：</p>
+<script type="math/tex; mode=display">\theta^{(l)}\leftarrow\epsilon=\frac{\sqrt{6}}{\sqrt{S_l+S_{l+1}}}</script><div class="note warning"><h3 id="激活函数-Activation-Funtion"><a href="#激活函数-Activation-Funtion" class="headerlink" title="激活函数 (Activation Funtion)"></a>激活函数 (Activation Funtion)</h3></div>
+<p>如果没有激活函数在各隐藏层之间进行参数传递时，无论你有多少层，其输出都是输入的线性组合，而这样就失去了使用神经网络的意义。于是需要我们在神经网络中需要引入一些非线性函数作为激励函数从而可以使神经网络的效果逼近任何可能的函数。</p>
+<h4 id="梯度消失问题-Gradient-Vanishing"><a href="#梯度消失问题-Gradient-Vanishing" class="headerlink" title="梯度消失问题 (Gradient Vanishing)"></a>梯度消失问题 (Gradient Vanishing)</h4><p>在神经网络中常用的激活函数有很多，当然<code>sigmoid</code>函数也是其中一位，但在深层的神经网络中使用sigmoid函数会使神经网络的训练效果大打折扣，原因在于反向传播过程中，sigmoid函数的导数最大为0.25，这样嵌套多层到达最后一层（也即输入层）时的梯度会很趋近于0，这样在第一层的参数学习速率会尤其缓慢，但在最后几层的参数却会以大步长更新并很快收敛。如何处理这样畸形的梯度更新问题呢？方法很简单，就是放弃sigmoid函数，换用其他激活函数。</p>
+<h4 id="ReLU-Rectified-Linear-Unit"><a href="#ReLU-Rectified-Linear-Unit" class="headerlink" title="ReLU (Rectified Linear Unit)"></a>ReLU (Rectified Linear Unit)</h4><p>ReLU是当今在搭建人工神经网络时最常使用的激活函数，其表达式为：</p>
+<script type="math/tex; mode=display">\sigma(z)=max(0,z)</script><p><img src="\images\post_images\神经网络(Nueral Network)-04.jpg" width="80%"></p>
+<p>同时还有ReLU函数的变种<code>Leaky ReLU</code>和<code>PReLU</code>（如上图），他们的出现都是为了解决在DeadRelu问题，但没有研究证明这两个变种的使用效果优于<code>ReLU</code>激活函数。</p>
+<p>与传统的sigmoid激活函数相比，其优势主要体现在：</p>
+<ol>
+<li>简化计算过程，降低计算成本；</li>
+<li>避免了梯度消失问题</li>
+<li>收敛速度更快</li>
+</ol>
+<p>但也要注意在使用ReLU做激活函数的过程中，不能将梯度下降中的学习速率$\eta$设置的太高，否则可能导致DeadReLU问题，即有一些神经元可能永远无法被激活，导致其对应参数永远无法更新。</p>
+<h4 id="Maxout"><a href="#Maxout" class="headerlink" title="Maxout"></a>Maxout</h4><p>maxout激活函数是一种可学习的激活函数，可以视为ReLU函数的范化。其表达式为：</p>
+<script type="math/tex; mode=display">\sigma(z)=max(z_1,z_2,\dots,z_k)</script><p>其中k是需要手动设置的参数，表示每次取最大值的节点节点组个数，下图表示了使用maxout激活函数（k=2）的神经网络：</p>
+<p><img src="\images\post_images\神经网络(Nueral Network)-05.jpg" width="80%"></p>
+<p>它的强大之处在于其拟和能力，理论上只要隐藏层神经元足够多，maxout函数就可以模拟任何凸函数。不过其具体使用中的效果还待日后实践后补充。</p>
+<div class="note warning"><h3 id="评价函数-Evaluation-Function"><a href="#评价函数-Evaluation-Function" class="headerlink" title="评价函数 (Evaluation Function)"></a>评价函数 (Evaluation Function)</h3></div>
+<p>在神经网络训练完成后，我们还需要使用一些函数来对模型的训练效果做出评价。</p>
+<h4 id="交叉验证-Cross-Validation"><a href="#交叉验证-Cross-Validation" class="headerlink" title="交叉验证 (Cross Validation)"></a>交叉验证 (Cross Validation)</h4><p>在神经网络中使用的交叉验证方法与回归问题中所使用的方法步骤基本相同，即将所有训练数据随机分成三组(比例可以相应调整)：</p>
+<ul>
+<li>第一组为训练集(60%)，其主要作用是训练参数，损失函数为$J_{train}(\theta)$</li>
+<li>第二组为交叉验证集(20%)，其主要作用是调整模型中的一些超参数（如正则化参数$\lambda$等）以选择合适的模型或诊断模型存在的问题，损失函数为$J_{CV}(\theta)$</li>
+<li>第三组为测试集(20%)，其主要作用是测试并验证模型训练效果，损失函数为$J_{test}(\theta)$</li>
+</ul>
+<h4 id="分类问题评价函数-Score-Function"><a href="#分类问题评价函数-Score-Function" class="headerlink" title="分类问题评价函数 (Score Function)"></a>分类问题评价函数 (Score Function)</h4><p>在分类问题中的预测结果通常有四种状态：</p>
+<ul>
+<li>TP(真阳性):正样本被正确预测为正样本</li>
+<li>FP(假阳性):负样本被错误预测为正样本</li>
+<li>TN(真阴性):负样本被正确预测为负样本</li>
+<li>FN(假阴性):正样本被错误预测为负样本</li>
+</ul>
+<p>我们可以使用预测精确度来评价模型的预测效果，即：</p>
+<script type="math/tex; mode=display">Accacy = \frac{TP+TN}{TP+FP+TN+FN}</script><p>但在二分类问题中，我们的负样本通常远远大于正样本数。举个例子，我们有一组是否患有癌症的数据，其中99.5%可能都是为患癌症的样本。如果我们构建一个函数无论输入所有输出都为0，即不患癌症，这样的预测准确率为99.5%，很显然用精确度来评价模型好坏已经没有意义。现实生活中这样的数据偏斜问题(skewed data)是很常见的，于是出现了一种新的评价模型的方法:</p>
+<script type="math/tex; mode=display">Precision = \frac{TP}{TP+FP}</script><script type="math/tex; mode=display">Recall=\frac{TP}{TP+FN}</script><script type="math/tex; mode=display">F\_Score = (1+\beta^2)*\frac{Precision*Recall}{\beta^2*Precision+Recall}</script><ul>
+<li>在使用时要将数量较少的样本设置为正样本（y=1）</li>
+<li><code>Precision</code>为模型寻找正样本的准确度</li>
+<li><code>Recall</code>为模型寻找正样本的全面性</li>
+<li>$\beta$用以平衡Precision和Recall的权重<ul>
+<li>$\beta &lt; 1$ Precision权重更高</li>
+<li>$\beta = 1$ 两者权重相同</li>
+<li>$\beta &gt; 1$ Recall权重更高</li>
+</ul>
+</li>
+<li>可以通过调节$h_{\theta}(x)$映射到y=1的阈值来改变F_Score</li>
+</ul>
+<div class="note warning"><h3 id="总结：训练步骤"><a href="#总结：训练步骤" class="headerlink" title="总结：训练步骤"></a>总结：训练步骤</h3></div>
+<p>根据上述分析，我们可以列出神经网络的训练步骤：</p>
+<ol>
+<li>寻找合适的网络架构（包括隐藏层数、隐藏层节点数、层间连接方式、损失函数、激活函数、梯度优化器等）；</li>
+<li>随机初始化参数矩阵；</li>
+<li>前向传播计算每层节点的值；</li>
+<li>计算损失函数$J(\theta)$；</li>
+<li>反向传播计算每层参数梯度$\frac{\partial}{\partial_{ij}^{(l)}}J(\theta)$；</li>
+<li>用数值计算方法检验梯度计算是否正确；</li>
+<li>使用梯度下降或其他优化算法最小化$J(\theta)$；</li>
+<li>使用评价函数检验模型训练效果。</li>
+</ol>
+<div class="note info"><h2 id="调试神经网络"><a href="#调试神经网络" class="headerlink" title="调试神经网络"></a>调试神经网络</h2></div>
+<h3 id="诊断误差来源"><a href="#诊断误差来源" class="headerlink" title="诊断误差来源"></a>诊断误差来源</h3><p>神经网络中的误差来源通常来自两个方面：<strong>偏斜（bias）和方差（varience）</strong>，偏斜误差通常导致欠拟合(underfit)、而方差误差则导致过拟合(overfit)。这两种误差在神经网络中的表现有所不同：</p>
+<ol>
+<li>error from bias (underfitting)<script type="math/tex; mode=display">J_{train}(\theta)>>0</script><script type="math/tex; mode=display">J_{train}(\theta) \approx J_{CV} (\theta)</script></li>
+<li>error from varience (overfitting)<script type="math/tex; mode=display">J_{train}(\theta) \approx 0</script><script type="math/tex; mode=display">J_{train}(\theta)>>J_{CV}(\theta)</script></li>
+</ol>
+<p>拿正则化参数变化对训练集和交叉验证集损失函数的影响为例：</p>
+<p><img src="\images\post_images\神经网络(Nueral Network)-06.jpg" width="80%"></p>
+<ul>
+<li>当$\lambda$很小时，训练集损失函数远大于验证集损失函数属于过拟合问题;</li>
+<li>当$\lambda$很大时，训练集损失函数约等于验证集损失函数且都远大于0，故属于欠拟合问题。</li>
+</ul>
+<h3 id="绘制学习曲线"><a href="#绘制学习曲线" class="headerlink" title="绘制学习曲线"></a>绘制学习曲线</h3><p>为了更易于区分是两种误差中的哪一种对我们的训练模型产生影响，我们可以采用绘制学习曲线的方法：</p>
+<ol>
+<li>以训练样本数量为横轴，损失值为纵轴建立坐标系；</li>
+<li>计算损失值时所使用的损失函数不包括正则化项；</li>
+<li>m=i时，训练使用的i个样本的要<strong>随机选取</strong>；</li>
+<li>在计算包含i个训练样本的损失值时，可以通过测试多次取平均值的方式得到较为可靠的损失值。</li>
+</ol>
+<p><img src="\images\post_images\神经网络(Nueral Network)-07.jpg" width="80%"></p>
+<p>当神经网络出现欠拟合或过拟合问题时，学习曲线也会有两种完全不同的表现：</p>
+<ul>
+<li>欠拟合：随着m增大，训练集和验证集损失函数十分接近且远高于期望损失值；</li>
+<li>过拟合：随着m增大，训练集和验证集损失函数以极慢的速度相互靠近，当m达到最大时仍有较大差距。</li>
+</ul>
+<p><img src="\images\post_images\神经网络(Nueral Network)-08.jpg" width="80%"></p>
+<h3 id="改进模型"><a href="#改进模型" class="headerlink" title="改进模型"></a>改进模型</h3><ol>
+<li>针对欠拟合问题<ul>
+<li>引入更多的特征</li>
+<li>改进模型（隐藏层数、隐藏节点数、激活函数、损失函数）</li>
+<li>减小正则化参数$\lambda$</li>
+</ul>
+</li>
+<li>针对过拟合问题<ul>
+<li>获取更多的训练数据</li>
+<li>筛减特征量</li>
+<li>增大正则化参数$\lambda$</li>
+<li>Dropout（见后文）</li>
+</ul>
+</li>
+</ol>
+<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>Dropout是一种应用于复杂前馈模型中防止过拟合的手段，它是通过在每个训练批次中随机删除p%的节点以阻止特征检测器的共同作用（相互关联的依赖关系）来提升神经网络的性能，以此得到范化性更强，不太依赖某些局部特征的训练结果。</p>
+<p><img src="\images\post_images\神经网络(Nueral Network)-09.jpg" width="80%"></p>
+<p>Dropout的实现步骤大致分为以下几部分：</p>
+<ol>
+<li>随机生成dropout向量$r_j^{(l)} \sim Bernoulli(p)$控制每层被删除的节点</li>
+<li>$\widetilde{a}^{(l)}=a^{(l)}*r^{(l)}$</li>
+<li>$a^{(l+1)}=\sigma(\theta^{(l)}*\widetilde{a}^{(l)})$</li>
+<li>在使用模型测试时，则不需要再进行dropout，取而代之的是对于每个参数都要乘上(1-p)以保证其后继节点的数学期望值不变，即：$\theta_{test}^{(l)}=(1-p)\theta^{(l)}$</li>
+</ol>
+<blockquote>
+<p>向量$r^{(l)}$中p%的元素为0，对应于该层被忽略的元素</p>
+</blockquote>
+<p><img src="\images\post_images\神经网络(Nueral Network)-10.jpg" width="80%"></p>
+<div class="note default"><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.coursera.org/learn/machine-learning/home/week/6" target="_blank" rel="noopener">AndrewNG机器学习</a><br><a href="https://www.youtube.com/watch?v=Dr-WRlEFefw&amp;feature=youtu.be" target="_blank" rel="noopener">李宏毅机器学习</a><br><a href="https://www.jianshu.com/p/f7ea71f2344f" target="_blank" rel="noopener">分类评判标准F-score</a><br><a href="https://blog.csdn.net/tyhj_sf/article/details/79932893" target="_blank" rel="noopener">常用激活函数理解与总结</a><br><a href="https://blog.csdn.net/hjimce/article/details/50414467" target="_blank" rel="noopener">Maxout网络学习</a><br><a href="https://blog.csdn.net/program_developer/article/details/80737724" target="_blank" rel="noopener">深度学习中dropout原理</a></p></div>
       
-    </li></ol></div>
+    </div>
     
     
     
 
     <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
       
     </div>
 
@@ -1069,206 +648,59 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    杨宇豪
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yangyh408.me/2020/04/11/神经网络-Nueral-Network/" title="神经网络(Nueral Network)">http://yangyh408.me/2020/04/11/神经网络-Nueral-Network/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yangyh408.me/2019/04/08/错排公式的推导与应用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="杨宇豪">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/user-avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YangYH408">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/08/错排公式的推导与应用/" itemprop="url">错排公式的推导与应用</a></h1>
-        
-
-
-        <div class="post-meta">
-
+        <div class="post-tags">
           
-
-          <span class="post-time">
-            
-
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-18T22:48:55+08:00">
-                2020-03-18
-              </time>
-            
-          </span>
-
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
           
+            <a href="/tags/MachineLearning/" rel="tag"><i class="fa fa-tag"></i> MachineLearning</a>
           
-          
-          
-             <span id="/2019/04/08/错排公式的推导与应用/" class="leancloud_visitors" data-flag-title="错排公式的推导与应用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <span class="post-meta-item-text">评论数:</span>
-                <a href="/2019/04/08/错排公式的推导与应用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/08/错排公式的推导与应用/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.2k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h1 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h1><p>错排问题，又称更列问题，是组合数学中的问题之一。对于它的研究最早可以追溯到十八世纪，当时他被数学家尼古拉·伯努利和欧拉研究，因此在历史上也被称为伯努利—欧拉的错装信封问题。这个问题有许多具体的版本，比如在写信时讲n封信装到n个不同的信封里，有多少种全部装错信封的情况？再比如n个人各写一张贺卡相互赠送，有多少种赠送方法？这些经典的题目都是典型的错排问题。<br>
-        
-        
-
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/08/错排公式的推导与应用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/30/机器学习-分类问题（Classification）/" rel="next" title="机器学习-分类问题（Classification）">
+                <i class="fa fa-chevron-left"></i> 机器学习-分类问题（Classification）
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    
-    
-    
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1278,14 +710,17 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e7211c221e0012d" async="async"></script>
+</div>
 
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1293,6 +728,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -1313,8 +755,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1401,6 +852,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#神经网络初步"><span class="nav-number">1.</span> <span class="nav-text">神经网络初步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#神经网络的实现"><span class="nav-number">2.</span> <span class="nav-text">神经网络的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#损失函数-Cost-Function"><span class="nav-number">2.1.</span> <span class="nav-text">损失函数 (Cost Function)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反向传播-Backpropagation"><span class="nav-number">2.2.</span> <span class="nav-text">反向传播 (Backpropagation)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度计算"><span class="nav-number">2.2.1.</span> <span class="nav-text">梯度计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#验证梯度"><span class="nav-number">2.2.2.</span> <span class="nav-text">验证梯度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数初始化"><span class="nav-number">2.2.3.</span> <span class="nav-text">参数初始化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#激活函数-Activation-Funtion"><span class="nav-number">2.3.</span> <span class="nav-text">激活函数 (Activation Funtion)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#梯度消失问题-Gradient-Vanishing"><span class="nav-number">2.3.1.</span> <span class="nav-text">梯度消失问题 (Gradient Vanishing)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ReLU-Rectified-Linear-Unit"><span class="nav-number">2.3.2.</span> <span class="nav-text">ReLU (Rectified Linear Unit)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Maxout"><span class="nav-number">2.3.3.</span> <span class="nav-text">Maxout</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#评价函数-Evaluation-Function"><span class="nav-number">2.4.</span> <span class="nav-text">评价函数 (Evaluation Function)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#交叉验证-Cross-Validation"><span class="nav-number">2.4.1.</span> <span class="nav-text">交叉验证 (Cross Validation)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类问题评价函数-Score-Function"><span class="nav-number">2.4.2.</span> <span class="nav-text">分类问题评价函数 (Score Function)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结：训练步骤"><span class="nav-number">2.5.</span> <span class="nav-text">总结：训练步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试神经网络"><span class="nav-number">3.</span> <span class="nav-text">调试神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#诊断误差来源"><span class="nav-number">3.1.</span> <span class="nav-text">诊断误差来源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制学习曲线"><span class="nav-number">3.2.</span> <span class="nav-text">绘制学习曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改进模型"><span class="nav-number">3.3.</span> <span class="nav-text">改进模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dropout"><span class="nav-number">3.4.</span> <span class="nav-text">Dropout</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1571,6 +1038,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
