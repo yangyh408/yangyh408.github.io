@@ -148,7 +148,7 @@
 <meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-08.jpg">
 <meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-09.jpg">
 <meta property="og:image" content="http://yangyh408.me/images/post_images/神经网络(Nueral%20Network)-10.jpg">
-<meta property="og:updated_time" content="2020-04-11T14:18:23.785Z">
+<meta property="og:updated_time" content="2020-04-11T14:54:39.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="神经网络(Nueral Network)">
 <meta name="twitter:description" content="神经网络初步 神经网络（Neural Network）是机器学习众多算法中的一种，其原理是模仿人脑内神经元之间信息的处理方式，希望借此完成回归模型和分类模型所难以实现的非线性预测。简单来说，你可以将神经网络看作一个复杂的多层复合函数，输入数据通过多层函数的嵌套计算从而求得预测结果。换个角度也可以把多层神经网络理解为将输入数据做多层特征变换的过程。 神经网络通常由三部分组成:输入层、隐藏层、输出层。">
@@ -384,7 +384,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-04-11T22:18:23+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-11T22:54:39+08:00">
                 2020-04-11
               </time>
             
@@ -497,7 +497,7 @@
 <div class="note warning"><h3 id="反向传播-Backpropagation"><a href="#反向传播-Backpropagation" class="headerlink" title="反向传播 (Backpropagation)"></a>反向传播 (Backpropagation)</h3></div>
 <p>反向传播是一种用于神经网络快捷求解参数梯度的方法。由于连接了很多层参数，我们在计算梯度时需要多次采用链式法则，这里用神经网络中的某一部分来举例如何计算梯度：</p>
 <p><img src="\images\post_images\神经网络(Nueral Network)-02.jpg" width="80%"></p>
-<script type="math/tex; mode=display">\frac{\partial J}{\partial \theta_1}= \frac{\partial J}{\partial z} \frac{\partial z}{\partial \theta_1}=\frac{\partial J}{\partial z}*a_1</script><script type="math/tex; mode=display">\frac{\partial J}{\partial z}=\frac{\partial J}{\partial a}\frac{\partial a}{\partial z}=(\frac{\partial J}{\partial z'}\frac{\partial z'}{\partial a}+\frac{\partial J}{\partial z''}\frac{\partial z''}{\partial a})\sigma'(z)=\sigma'(z)(\theta_3\frac{\partial J}{\partial z'}+\theta_4\frac{\partial J}{\partial z''})</script><p>不难看出，只要我们求出$\frac{\partial J}{\partial z’’}$和$\frac{\partial J}{\partial z’’}$就能算出损失函数对$\theta_1$的梯度。除了顺序使用递归求解外，如果我们从输出层开始反向逐层计算梯度，则可直接求解，这便是反向传播。</p>
+<script type="math/tex; mode=display">\frac{\partial J}{\partial \theta_1}= \frac{\partial J}{\partial z} \frac{\partial z}{\partial \theta_1}=\frac{\partial J}{\partial z}*a_1</script><script type="math/tex; mode=display">\frac{\partial J}{\partial z}=\frac{\partial J}{\partial a}\frac{\partial a}{\partial z}=(\frac{\partial J}{\partial z'}\frac{\partial z'}{\partial a}+\frac{\partial J}{\partial z''}\frac{\partial z''}{\partial a})\sigma'(z)=\sigma'(z)(\theta_3\frac{\partial J}{\partial z'}+\theta_4\frac{\partial J}{\partial z''})</script><p>不难看出，只要我们求出$\frac{\partial J}{\partial z’}$和$\frac{\partial J}{\partial z’’}$就能算出损失函数对$\theta_1$的梯度。除了顺序使用递归求解外，如果我们从输出层开始反向逐层计算梯度，则可直接求解，这便是反向传播。</p>
 <h4 id="梯度计算"><a href="#梯度计算" class="headerlink" title="梯度计算"></a>梯度计算</h4><p>综上所述，我们可以得出反向传播求解梯度的步骤为：</p>
 <ol>
 <li>设置输入层：<script type="math/tex; mode=display">a^{(1)}=x^{(i)},i=1,2,\dots,m</script></li>
@@ -566,7 +566,7 @@
 <li>随机初始化参数矩阵；</li>
 <li>前向传播计算每层节点的值；</li>
 <li>计算损失函数$J(\theta)$；</li>
-<li>反向传播计算每层参数梯度$\frac{\partial}{\partial_{ij}^{(l)}}J(\theta)$；</li>
+<li>反向传播计算每层参数梯度$\frac{\partial}{\partial \theta_{ij}^{(l)}}J(\theta)$；</li>
 <li>用数值计算方法检验梯度计算是否正确；</li>
 <li>使用梯度下降或其他优化算法最小化$J(\theta)$；</li>
 <li>使用评价函数检验模型训练效果。</li>
@@ -574,8 +574,8 @@
 <div class="note info"><h2 id="调试神经网络"><a href="#调试神经网络" class="headerlink" title="调试神经网络"></a>调试神经网络</h2></div>
 <h3 id="诊断误差来源"><a href="#诊断误差来源" class="headerlink" title="诊断误差来源"></a>诊断误差来源</h3><p>神经网络中的误差来源通常来自两个方面：<strong>偏斜（bias）和方差（varience）</strong>，偏斜误差通常导致欠拟合(underfit)、而方差误差则导致过拟合(overfit)。这两种误差在神经网络中的表现有所不同：</p>
 <ol>
-<li>error from bias (underfitting)<script type="math/tex; mode=display">J_{train}(\theta)>>0</script><script type="math/tex; mode=display">J_{train}(\theta) \approx J_{CV} (\theta)</script></li>
-<li>error from varience (overfitting)<script type="math/tex; mode=display">J_{train}(\theta) \approx 0</script><script type="math/tex; mode=display">J_{train}(\theta)>>J_{CV}(\theta)</script></li>
+<li>error from bias (underfitting)<script type="math/tex; mode=display">J_{train}(\theta) \gg 0</script><script type="math/tex; mode=display">J_{train}(\theta) \approx J_{CV} (\theta)</script></li>
+<li>error from varience (overfitting)<script type="math/tex; mode=display">J_{train}(\theta) \approx 0</script><script type="math/tex; mode=display">J_{train}(\theta) \gg J_{CV}(\theta)</script></li>
 </ol>
 <p>拿正则化参数变化对训练集和交叉验证集损失函数的影响为例：</p>
 <p><img src="\images\post_images\神经网络(Nueral Network)-06.jpg" width="80%"></p>
